@@ -1,139 +1,148 @@
+
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
-from tf2_ros import TransformBroadcaster, TransformException
-from tf2_ros.buffer import Buffer
-from tf2_ros.transform_listener import TransformListener
-from geometry_msgs.msg import TransformStamped, Twist
-from tf_transformations import quaternion_from_euler
+from rclpy.constants import S_TO_NS
+from rclpy.time import Time
+from std_msgs.msg import Float64MultiArray
+from geometry_msgs.msg import TwistStamped
+from sensor_msgs.msg import JointState
+from nav_msgs.msg import Odometry
+import os
+import yaml
 import numpy as np
+from tf2_ros import TransformBroadcaster
+from geometry_msgs.msg import TransformStamped
+import math
+from ament_index_python.packages import get_package_share_directory
+from tf_transformations import quaternion_from_euler
+
 
 class AWCTFBroadcaster(Node):
 
     def __init__(self):
-        super().__init__("awc_broadcaster")
+        super().__init__("awc_controller")
 
-        # Initialize variables
-        self.prev_time = self.get_clock().now()
-        self.last_x_ = 0.0
-        self.last_y_ = 0.0
-        self.last_theta_ = 0.0  # Orientation in radians
-        self.linear_velocity_x_ = 0.0
-        self.linear_velocity_y_ = 0.0
-        self.angular_velocity_z_ = 0.0
+        # EXTRACT DATA FROM PARAMETER CONFIG
+        package_dir = get_package_share_directory('tf_publisher')
+        yaml_file_path = os.path.join(package_dir, 'config', 'awc_description.yaml')
+        with open(yaml_file_path, 'r') as file:
+            config = yaml.safe_load(file)
 
-        # Timer
-        self.timer_ = self.create_timer(0.1, self.timerCallback)
+        self.wheel_radius_ = config['wheel_radius']
+        self.wheel_separation_ = config['wheel_separation']
 
-        # Subscribe to cmd_vel topic
-        self.cmd_vel_joy_subscription_ = self.create_subscription(
-            Twist,
-            "/cmd_vel_joy",
-            self.cmdVel_joy_Callback,
-            10
-        )
-        self.cmd_vel_joy_subscription_ = self.create_subscription(
-            Twist,
-            "/cmd_vel",
-            self.cmdVelCallback,
-            10
-        )
+        #Initialize Paramters
+        self.wheel_radius_ = self.wheel_radius_ * 2
+        self.wheel_separation_ = self.wheel_separation_ * 2
+
+        self.left_wheel_prev_pos_ = 0.0
+        self.right_wheel_prev_pos_ = 0.0
+        self.x_ = 0.0
+        self.y_ = 0.0
+        self.theta_ = 0.0
+
+        self.wheel_cmd_pub_ = self.create_publisher(Float64MultiArray, "velocity_controller/commands", 10)
+        self.vel_sub_ = self.create_subscription(TwistStamped, "awc_controller/cmd_vel", self.velCallback, 10)
+        self.joint_sub_ = self.create_subscription(JointState,"joint_states", self.jointCallback, 10)  #Joint States? idk maybe change form encoder      
+        self.odom_pub_ = self.create_publisher(Odometry, "awc_controller/odom", 10)
+
+        self.speed_conversion_ = np.array([[self.wheel_radius_/2, self.wheel_radius_/2],
+                                           [self.wheel_radius_/self.wheel_separation_, -self.wheel_radius_/self.wheel_separation_]])
+
+        # Fill the Odometry message with invariant parameters
+        self.odom_msg_ = Odometry()
+        self.odom_msg_.header.frame_id = "odom"
+        self.odom_msg_.child_frame_id = "base_link"
+        self.odom_msg_.pose.pose.orientation.x = 0.0
+        self.odom_msg_.pose.pose.orientation.y = 0.0
+        self.odom_msg_.pose.pose.orientation.z = 0.0
+        self.odom_msg_.pose.pose.orientation.w = 1.0
+
+        # Fill the TF message
+        self.br_ = TransformBroadcaster(self)
+        self.transform_stamped_ = TransformStamped()
+        self.transform_stamped_.header.frame_id = "odom"
+        self.transform_stamped_.child_frame_id = "base_link"
+
+        self.prev_time_ = self.get_clock().now()
 
 
-        # TF Broadcaster
-        self.static_tf_broadcaster_ = StaticTransformBroadcaster(self)
-        self.dynamic_tf_broadcaster_ = TransformBroadcaster(self)
+    def velCallback(self, msg):
+        # Implements the differential kinematic model
+        # Given v and w, calculate the velocities of the wheels
+        robot_speed = np.array([[msg.twist.linear.x],
+                                [msg.twist.angular.z]])
+        wheel_speed = np.matmul(np.linalg.inv(self.speed_conversion_), robot_speed) 
 
-        # Static transform setup
-        """static transformation between base link and lidar"""
-        self.static_transform_stamped_ = TransformStamped()
-        self.static_transform_stamped_.header.stamp = self.get_clock().now().to_msg()
-        self.static_transform_stamped_.header.frame_id = "base_link"
-        self.static_transform_stamped_.child_frame_id = "laser"
-        self.static_transform_stamped_.transform.translation.x = 0.2 #in meters Change later
-        self.static_transform_stamped_.transform.translation.y = 0.0 # Change later
-        self.static_transform_stamped_.transform.translation.z = 0.1 #Change later
-        self.static_transform_stamped_.transform.rotation.x = 0.0
-        self.static_transform_stamped_.transform.rotation.y = 0.0
-        self.static_transform_stamped_.transform.rotation.z = 0.0
-        self.static_transform_stamped_.transform.rotation.w = 1.0
+        wheel_speed_msg = Float64MultiArray()
+        wheel_speed_msg.data = [wheel_speed[1, 0], wheel_speed[0, 0]]
 
-        self.static_tf_broadcaster_.sendTransform(self.static_transform_stamped_)
-        self.get_logger().info("Publishing static transform between %s and %s" % 
-                      (
-                        self.static_transform_stamped_.header.frame_id,
-                        self.static_transform_stamped_.child_frame_id
-                      ))
+        self.wheel_cmd_pub_.publish(wheel_speed_msg)
 
+    
+    def jointCallback(self, msg):
+        # Implements the inverse differential kinematic model
+        # Given the position of the wheels, calculates their velocities
+        # then calculates the velocity of the robot wrt the robot frame
+        # and then converts it in the global frame and publishes the TF
+        dp_left = msg.position[1] - self.left_wheel_prev_pos_
+        dp_right = msg.position[0] - self.right_wheel_prev_pos_
+        dt = Time.from_msg(msg.header.stamp) - self.prev_time_
+
+        # Actualize the prev pose for the next itheration
+        self.left_wheel_prev_pos_ = msg.position[1]
+        self.right_wheel_prev_pos_ = msg.position[0]
+        self.prev_time_ = Time.from_msg(msg.header.stamp)
+
+        # Calculate the rotational speed of each wheel
+        fi_left = dp_left / (dt.nanoseconds / S_TO_NS)
+        fi_right = dp_right / (dt.nanoseconds / S_TO_NS)
+
+        # Calculate the linear and angular velocity
+        linear = (self.wheel_radius_ * fi_right + self.wheel_radius_ * fi_left) / 2
+        angular = (self.wheel_radius_ * fi_right - self.wheel_radius_ * fi_left) / self.wheel_separation_
+
+        # Calculate the position increment
+        d_s = (self.wheel_radius_ * dp_right + self.wheel_radius_ * dp_left) / 2
+        d_theta = (self.wheel_radius_ * dp_right - self.wheel_radius_ * dp_left) / self.wheel_separation_
+        self.theta_ += d_theta
+        self.x_ += d_s * math.cos(self.theta_)
+        self.y_ += d_s * math.sin(self.theta_)
         
-        
+        # Compose and publish the odom message
+        q = quaternion_from_euler(0, 0, self.theta_)
+        self.odom_msg_.header.stamp = self.get_clock().now().to_msg()
+        self.odom_msg_.pose.pose.position.x = self.x_
+        self.odom_msg_.pose.pose.position.y = self.y_
+        self.odom_msg_.pose.pose.orientation.x = q[0]
+        self.odom_msg_.pose.pose.orientation.y = q[1]
+        self.odom_msg_.pose.pose.orientation.z = q[2]
+        self.odom_msg_.pose.pose.orientation.w = q[3]
+        self.odom_msg_.twist.twist.linear.x = linear
+        self.odom_msg_.twist.twist.angular.z = angular
+        self.odom_pub_.publish(self.odom_msg_)
 
-        # Service Server
-        self.get_transform_srv_ = self.create_service(GetTransform, "get_transform", self.getTransformCallback)
-    def cmdVel_joy_Callback(self, msg: Twist):
-        """Callback to update linear and angular velocities from cmd_vel & cmd_vel_joy."""
-        self.linear_velocity_x_joy_ = msg.linear.x
-        self.linear_velocity_y_joy_ = msg.linear.y
-        self.angular_velocity_z_joy_ = msg.angular.z
-    def cmdVelCallback(self, msg: Twist):
-        """Callback to update linear and angular velocities from cmd_vel & cmd_vel_joy."""
-        self.linear_velocity_x_command_ = msg.linear.x
-        self.linear_velocity_y_command_ = msg.linear.y
-        self.angular_velocity_z_command_ = msg.angular.z
+        # TF
+        self.transform_stamped_.transform.translation.x = self.x_
+        self.transform_stamped_.transform.translation.y = self.y_
+        self.transform_stamped_.transform.rotation.x = q[0]
+        self.transform_stamped_.transform.rotation.y = q[1]
+        self.transform_stamped_.transform.rotation.z = q[2]
+        self.transform_stamped_.transform.rotation.w = q[3]
+        self.transform_stamped_.header.stamp = self.get_clock().now().to_msg()
+        self.br_.sendTransform(self.transform_stamped_)
 
-    def timerCallback(self):
-        """Timer callback to update the dynamic transformation."""
-        current_time = self.get_clock().now()
-        dt = (current_time - self.prev_time).nanoseconds / 1e9
-        self.prev_time = current_time
-        self.linear_velocity_x_ = self.linear_velocity_x_command_ + self.linear_velocity_x_joy_
-        self.linear_velocity_y_ = self.linear_velocity_y_command_ + self.linear_velocity_y_joy_
-        self.angular_velocity_z_ = self.angular_velocity_z_command_ + self.angular_velocity_z_joy_
-
-        # Update pose based on velocities
-        self.last_theta_ += self.angular_velocity_z_ * dt
-        self.last_theta_ = self.last_theta_ % (2 * np.pi)  # Keep theta in [0, 2π]
-        self.last_x_ += (self.linear_velocity_x_ * np.cos(self.last_theta_) - self.linear_velocity_y_ * np.sin(self.last_theta_)) * dt
-        self.last_y_ += (self.linear_velocity_x_ * np.sin(self.last_theta_) + self.linear_velocity_y_ * np.cos(self.last_theta_)) * dt
-
-        # Convert updated orientation to quaternion
-        q = quaternion_from_euler(0, 0, self.last_theta_)
-
-        # Update and broadcast transform
-        self.dynamic_transform_stamped_ = TransformStamped()
-        self.dynamic_transform_stamped_.header.stamp = self.get_clock().now().to_msg()
-        self.dynamic_transform_stamped_.header.frame_id = "odom"
-        self.dynamic_transform_stamped_.child_frame_id = "base_link"
-        self.dynamic_transform_stamped_.transform.translation.x = self.last_x_
-        self.dynamic_transform_stamped_.transform.translation.y = self.last_y_
-        self.dynamic_transform_stamped_.transform.translation.z = 0.0
-        self.dynamic_transform_stamped_.transform.rotation.x = q[0]
-        self.dynamic_transform_stamped_.transform.rotation.y = q[1]
-        self.dynamic_transform_stamped_.transform.rotation.z = q[2]
-        self.dynamic_transform_stamped_.transform.rotation.w = q[3]
-
-        self.dynamic_tf_broadcaster_.sendTransform(self.dynamic_transform_stamped_)
-
-    def getTransformCallback(self, req, res):
-        """Service callback to get the requested transform."""
-        self.get_logger().info("Requested Transform between %s and %s" % (req.frame_id, req.child_frame_id))
-        try:
-            requested_transform = self.tf_buffer_.lookup_transform(req.frame_id, req.child_frame_id, rclpy.time.Time())
-            res.transform = requested_transform
-            res.success = True
-        except TransformException as e:
-            self.get_logger().error("An error occurred while transforming %s and %s: %s" %
-                                     (req.frame_id, req.child_frame_id, e))
-            res.success = False
-        return res
 
 def main():
     rclpy.init()
-    simple_tf_kinematics = AWCTFBroadcaster()
-    rclpy.spin(simple_tf_kinematics)
-    simple_tf_kinematics.destroy_node()
+
+    simple_controller = AWCTFBroadcaster()
+    rclpy.spin(simple_controller)
+    
+    simple_controller.destroy_node()
     rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
