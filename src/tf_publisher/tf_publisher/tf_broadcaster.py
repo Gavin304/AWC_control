@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from agv_msgs.srv import GetTransform
+from awc_msgs.srv import GetTransform
 from tf2_ros.static_transform_broadcaster import StaticTransformBroadcaster
 from tf2_ros import TransformBroadcaster, TransformException
 from tf2_ros.buffer import Buffer
@@ -85,7 +85,7 @@ class AWCTFBroadcaster(Node):
         dt = (current_time - self.prev_time).nanoseconds / 1e9
         self.prev_time = current_time
         self.linear_velocity_x_ = self.linear_velocity_x_command_ + self.linear_velocity_x_joy_
-        self.linear_velocity_y_ = self.linear_velocity_y_command_ + self.linear_velocity_y_joy_
+        self.linear_velocity_y_ = 0.0 #Differential Drive
         self.angular_velocity_z_ = self.angular_velocity_z_command_ + self.angular_velocity_z_joy_
 
         # Update pose based on velocities
@@ -127,7 +127,7 @@ class AWCTFBroadcaster(Node):
 
 def main():
     rclpy.init()
-    simple_tf_kinematics = AGVTFBroadcaster()
+    simple_tf_kinematics = AWCTFBroadcaster()
     rclpy.spin(simple_tf_kinematics)
     simple_tf_kinematics.destroy_node()
     rclpy.shutdown()
