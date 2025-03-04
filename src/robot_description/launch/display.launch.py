@@ -12,13 +12,19 @@ from launch_ros.parameter_descriptions import ParameterValue
 def generate_launch_description():
     bumperbot_description_dir = get_package_share_directory("robot_description")
 
-    model_arg = DeclareLaunchArgument(name="model", default_value=os.path.join(
-                                        bumperbot_description_dir, "urdf", "robot.urdf.xacro"
-                                        ),
+    model_arg = DeclareLaunchArgument(name="model",
+                                      default_value=os.path.join(
+                                          bumperbot_description_dir,
+                                          "urdf",
+                                          "robot.urdf.xacro"
+                                      ),
                                       description="Absolute path to robot urdf file")
 
-    robot_description = ParameterValue(Command(["xacro ", LaunchConfiguration("model")]),
-                                       value_type=str)
+    # This is used only for robot_state_publisher, not as a directory.
+    robot_description = ParameterValue(
+        Command(["xacro ", LaunchConfiguration("model")]),
+        value_type=str
+    )
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
@@ -31,12 +37,16 @@ def generate_launch_description():
         executable="joint_state_publisher_gui"
     )
 
+    # Use the actual path for display.rviz instead of robot_description
     rviz_node = Node(
         package="rviz2",
         executable="rviz2",
         name="rviz2",
         output="screen",
-        arguments=["-d", os.path.join(robot_description, "rviz", "display.rviz")],
+        arguments=[
+            "-d",
+            os.path.join(bumperbot_description_dir, "rviz", "display.rviz")
+        ],
     )
 
     return LaunchDescription([

@@ -56,7 +56,7 @@
     <!-- Joint from part_1 to part_1_2 -->
     <joint name="right_wheel" type="continuous">
         <origin xyz="-0.480688 -0.0711889 0.605633" rpy="-1.5708 3.3994e-20 1.5708"/>
-        <parent link="part_1"/>
+        <parent link="base_link"/>
         <child link="part_1_2"/>
         <axis xyz="0 0 1"/>
         <limit effort="10" velocity="6"/>
@@ -89,7 +89,7 @@
     <!-- Joint from part_1 to part_1_3 -->
     <joint name="left_wheel" type="continuous">
         <origin xyz="0.0616039 -0.0708403 0.609618" rpy="1.5708 -1.30234 1.5708"/>
-        <parent link="part_1"/>
+        <parent link="base_link"/>
         <child link="part_1_3"/>
         <axis xyz="0 0 1"/>
         <limit effort="10" velocity="6"/>
