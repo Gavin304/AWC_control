@@ -6,6 +6,7 @@
     <xacro:include filename="$(find robot_description)/urdf/robot_gazebo.xacro"/>
 
     <!-- Link part_1 -->
+    <link name="base_footprint"/>
     <link name="base_link">
         <inertial>
             <origin xyz="-0.209543 -0.140978 0.819711" rpy="0 0 0"/>
@@ -53,6 +54,11 @@
             </geometry>
         </collision>
     </link>
+    <joint name="base_joint" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
     <!-- Joint from part_1 to part_1_2 -->
     <joint name="right_wheel" type="continuous">
         <origin xyz="-0.480688 -0.0711889 0.605633" rpy="-1.5708 3.3994e-20 1.5708"/>
