@@ -1,0 +1,10 @@
+[0.013s] Invoking command in '/home/gavin/ros2_ws/build/awc_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/awc_msgs -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/awc_msgs
+[0.028s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.130s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.182s] [31mCMake Error at CMakeLists.txt:25 (rosidl_generate_interfaces):
+[0.182s]   Unknown CMake command "rosidl_generate_interfaces".
+[0.182s] 
+[0.182s] [0m
+[0.182s] -- Configuring incomplete, errors occurred!
+[0.182s] See also "/home/gavin/ros2_ws/build/awc_msgs/CMakeFiles/CMakeOutput.log".
+[0.195s] Invoked command in '/home/gavin/ros2_ws/build/awc_msgs' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/awc_msgs -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/awc_msgs

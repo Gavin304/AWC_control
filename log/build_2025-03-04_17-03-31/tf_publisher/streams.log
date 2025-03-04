@@ -1,0 +1,37 @@
+[0.765s] Invoking command in '/home/gavin/ros2_ws/src/tf_publisher': PYTHONPATH=/home/gavin/ros2_ws/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_publisher build --build-base /home/gavin/ros2_ws/build/tf_publisher/build install --record /home/gavin/ros2_ws/build/tf_publisher/install.log --single-version-externally-managed install_data
+[0.949s] running egg_info
+[0.950s] creating ../../build/tf_publisher/tf_publisher.egg-info
+[0.959s] writing ../../build/tf_publisher/tf_publisher.egg-info/PKG-INFO
+[0.960s] writing dependency_links to ../../build/tf_publisher/tf_publisher.egg-info/dependency_links.txt
+[0.960s] writing entry points to ../../build/tf_publisher/tf_publisher.egg-info/entry_points.txt
+[0.960s] writing requirements to ../../build/tf_publisher/tf_publisher.egg-info/requires.txt
+[0.960s] writing top-level names to ../../build/tf_publisher/tf_publisher.egg-info/top_level.txt
+[0.960s] writing manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[0.980s] reading manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[0.981s] writing manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[0.981s] running build
+[0.981s] running build_py
+[0.982s] creating /home/gavin/ros2_ws/build/tf_publisher/build
+[0.982s] creating /home/gavin/ros2_ws/build/tf_publisher/build/lib
+[0.982s] creating /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+[0.982s] copying tf_publisher/__init__.py -> /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+[0.982s] copying tf_publisher/tf_broadcaster.py -> /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+[0.982s] running install
+[0.986s] running install_lib
+[0.997s] creating /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[0.997s] copying /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher/__init__.py -> /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[0.997s] copying /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher/tf_broadcaster.py -> /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[0.997s] byte-compiling /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/__init__.py to __init__.cpython-310.pyc
+[0.997s] byte-compiling /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
+[0.998s] running install_data
+[0.999s] creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index
+[0.999s] creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index
+[0.999s] creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index/packages
+[0.999s] copying resource/tf_publisher -> /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index/packages
+[0.999s] copying package.xml -> /home/gavin/ros2_ws/install/tf_publisher/share/tf_publisher
+[0.999s] running install_egg_info
+[1.011s] Copying ../../build/tf_publisher/tf_publisher.egg-info to /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher-0.0.0-py3.10.egg-info
+[1.012s] running install_scripts
+[1.118s] Installing tf_broadcaster.py script to /home/gavin/ros2_ws/install/tf_publisher/lib/tf_publisher
+[1.118s] writing list of installed files to '/home/gavin/ros2_ws/build/tf_publisher/install.log'
+[1.146s] Invoked command in '/home/gavin/ros2_ws/src/tf_publisher' returned '0': PYTHONPATH=/home/gavin/ros2_ws/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_publisher build --build-base /home/gavin/ros2_ws/build/tf_publisher/build install --record /home/gavin/ros2_ws/build/tf_publisher/install.log --single-version-externally-managed install_data

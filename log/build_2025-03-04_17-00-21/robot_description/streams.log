@@ -1,0 +1,44 @@
+[0.013s] Invoking command in '/home/gavin/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/robot_description -- -j4 -l4
+[0.039s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.139s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.191s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.191s] -- Added test 'lint_cmake' to check CMake code style
+[0.192s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.192s] -- Added test 'xmllint' to check XML markup files
+[0.193s] -- Configuring done
+[0.194s] -- Generating done
+[0.196s] -- Build files have been written to: /home/gavin/ros2_ws/build/robot_description
+[0.210s] Invoked command in '/home/gavin/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/robot_description -- -j4 -l4
+[0.219s] Invoking command in '/home/gavin/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/robot_description
+[0.224s] -- Install configuration: ""
+[0.224s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/launch
+[0.224s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/launch/gazebo.launch.py
+[0.224s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/launch/display.launch.py
+[0.224s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes
+[0.224s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.part
+[0.224s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.stl
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.2.part
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.2.stl
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/bumperbot.urdf.xacro
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/bumperbot_gazebo.xacro
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/robot_gazebo.xacro
+[0.225s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/robot.urdf.xacro
+[0.226s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/rviz
+[0.226s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/rviz/display.rviz
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[0.226s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/environment/path.sh
+[0.226s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/environment/path.dsv
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/local_setup.bash
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/local_setup.sh
+[0.226s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/local_setup.zsh
+[0.227s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/local_setup.dsv
+[0.227s] -- Installing: /home/gavin/ros2_ws/install/robot_description/share/robot_description/package.dsv
+[0.227s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[0.227s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[0.227s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[0.227s] -- Up-to-date: /home/gavin/ros2_ws/install/robot_description/share/robot_description/package.xml
+[0.230s] Invoked command in '/home/gavin/ros2_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/robot_description

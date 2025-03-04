@@ -1,0 +1,23 @@
+[0.024s] Invoking command in '/home/gavin/ros2_ws/build/robot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/robot_description -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/robot_description
+[0.061s] -- The C compiler identification is GNU 11.4.0
+[0.125s] -- The CXX compiler identification is GNU 11.4.0
+[0.132s] -- Detecting C compiler ABI info
+[0.194s] -- Detecting C compiler ABI info - done
+[0.203s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.205s] -- Detecting C compile features
+[0.205s] -- Detecting C compile features - done
+[0.212s] -- Detecting CXX compiler ABI info
+[0.286s] -- Detecting CXX compiler ABI info - done
+[0.291s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.292s] -- Detecting CXX compile features
+[0.292s] -- Detecting CXX compile features - done
+[0.294s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.593s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.693s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.755s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.756s] -- Added test 'lint_cmake' to check CMake code style
+[0.756s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.757s] -- Added test 'xmllint' to check XML markup files
+[0.759s] -- Configuring done
+[0.761s] -- Generating done
+[0.762s] -- Build files have been written to: /home/gavin/ros2_ws/build/robot_description

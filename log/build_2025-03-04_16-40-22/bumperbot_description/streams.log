@@ -1,0 +1,3 @@
+[0.012s] Invoking command in '/home/gavin/ros2_ws/build/bumperbot_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/awc_description -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/bumperbot_description
+[0.019s] [0mCMake Error: The source "/home/gavin/ros2_ws/src/awc_description/CMakeLists.txt" does not match the source "/home/gavin/ros2_ws/src/robot_description/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.[0m
+[0.185s] Invoked command in '/home/gavin/ros2_ws/build/bumperbot_description' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/awc_description -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/bumperbot_description

@@ -1,0 +1,1 @@
+Invoking command in '/home/gavin/ros2_ws/build/awc_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/awc_description -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/awc_description

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<robot name="awc_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+    <gazebo reference="base_link">
+        <mu1>0.0</mu1>
+        <mu2>0.0</mu2>
+        <material>Gazebo/Green</material>
+    </gazebo>
+    <gazebo reference="part_1_2">
+        <mu1>1000000000000000</mu1>
+        <mu2>1000000000000000</mu2>
+    </gazebo>
+    <gazebo reference="part_1_3">
+        <mu1>1000000000000000</mu1>
+        <mu2>1000000000000000</mu2>
+    </gazebo>
+</robot>

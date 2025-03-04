@@ -1,0 +1,36 @@
+[0.985s] Invoking command in '/home/gavin/ros2_ws/src/tf_publisher': PYTHONPATH=/home/gavin/ros2_ws/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_publisher build --build-base /home/gavin/ros2_ws/build/tf_publisher/build install --record /home/gavin/ros2_ws/build/tf_publisher/install.log --single-version-externally-managed install_data
+[1.241s] running egg_info
+[1.242s] creating ../../build/tf_publisher/tf_publisher.egg-info
+[1.251s] writing ../../build/tf_publisher/tf_publisher.egg-info/PKG-INFO
+[1.251s] writing dependency_links to ../../build/tf_publisher/tf_publisher.egg-info/dependency_links.txt
+[1.251s] writing entry points to ../../build/tf_publisher/tf_publisher.egg-info/entry_points.txt
+[1.251s] writing requirements to ../../build/tf_publisher/tf_publisher.egg-info/requires.txt
+[1.251s] writing top-level names to ../../build/tf_publisher/tf_publisher.egg-info/top_level.txt
+[1.251s] writing manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[1.272s] reading manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[1.272s] writing manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[1.272s] running build
+[1.272s] running build_py
+[1.272s] creating /home/gavin/ros2_ws/build/tf_publisher/build
+[1.272s] creating /home/gavin/ros2_ws/build/tf_publisher/build/lib
+[1.272s] creating /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+[1.272s] copying tf_publisher/__init__.py -> /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+[1.273s] copying tf_publisher/tf_broadcaster.py -> /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+[1.273s] running install
+[1.278s] running install_lib
+[1.287s] creating /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[1.287s] copying /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher/__init__.py -> /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[1.288s] copying /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher/tf_broadcaster.py -> /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[1.288s] byte-compiling /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/__init__.py to __init__.cpython-310.pyc
+[1.288s] byte-compiling /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
+[1.289s] running install_data
+[1.289s] creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index
+[1.289s] creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index
+[1.289s] creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index/packages
+[1.290s] copying resource/tf_publisher -> /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index/packages
+[1.290s] copying package.xml -> /home/gavin/ros2_ws/install/tf_publisher/share/tf_publisher
+[1.290s] running install_egg_info
+[1.302s] Copying ../../build/tf_publisher/tf_publisher.egg-info to /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher-0.0.0-py3.10.egg-info
+[1.303s] running install_scripts
+[1.406s] Installing tf_broadcaster.py script to /home/gavin/ros2_ws/install/tf_publisher/lib/tf_publisher
+[1.407s] writing list of installed files to '/home/gavin/ros2_ws/build/tf_publisher/install.log'

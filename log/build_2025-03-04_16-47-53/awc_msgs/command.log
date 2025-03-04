@@ -1,0 +1,1 @@
+Invoking command in '/home/gavin/ros2_ws/build/awc_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gavin/ros2_ws/src/awc_msgs -DCMAKE_INSTALL_PREFIX=/home/gavin/ros2_ws/install/awc_msgs
