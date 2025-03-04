@@ -1,0 +1,33 @@
+running egg_info
+writing ../../build/tf_publisher/tf_publisher.egg-info/PKG-INFO
+writing dependency_links to ../../build/tf_publisher/tf_publisher.egg-info/dependency_links.txt
+writing entry points to ../../build/tf_publisher/tf_publisher.egg-info/entry_points.txt
+writing requirements to ../../build/tf_publisher/tf_publisher.egg-info/requires.txt
+writing top-level names to ../../build/tf_publisher/tf_publisher.egg-info/top_level.txt
+reading manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+writing manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/gavin/ros2_ws/build/tf_publisher/build
+creating /home/gavin/ros2_ws/build/tf_publisher/build/lib
+creating /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+copying tf_publisher/__init__.py -> /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+copying tf_publisher/tf_broadcaster.py -> /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher
+running install
+running install_lib
+creating /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+copying /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher/__init__.py -> /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+copying /home/gavin/ros2_ws/build/tf_publisher/build/lib/tf_publisher/tf_broadcaster.py -> /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+byte-compiling /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
+running install_data
+creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index
+creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index
+creating /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index/packages
+copying resource/tf_publisher -> /home/gavin/ros2_ws/install/tf_publisher/share/ament_index/resource_index/packages
+copying package.xml -> /home/gavin/ros2_ws/install/tf_publisher/share/tf_publisher
+running install_egg_info
+Copying ../../build/tf_publisher/tf_publisher.egg-info to /home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages/tf_publisher-0.0.0-py3.10.egg-info
+running install_scripts
+Installing tf_broadcaster.py script to /home/gavin/ros2_ws/install/tf_publisher/lib/tf_publisher
+writing list of installed files to '/home/gavin/ros2_ws/build/tf_publisher/install.log'

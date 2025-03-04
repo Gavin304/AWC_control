@@ -1,0 +1,15 @@
+/home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/package_run_dependencies/awc_msgs
+/home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/parent_prefix_path/awc_msgs
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/ament_prefix_path.sh
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/ament_prefix_path.dsv
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/path.sh
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/path.dsv
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.bash
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.sh
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.zsh
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.dsv
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/package.dsv
+/home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/packages/awc_msgs
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgsConfig.cmake
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgsConfig-version.cmake
+/home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/package.xml

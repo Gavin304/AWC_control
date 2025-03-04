@@ -1,0 +1,20 @@
+[0.810s] Invoking command in '/home/gavin/ros2_ws/awc_bringup': PYTHONPATH=/home/gavin/ros2_ws/build/awc_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/awc_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/awc_bringup build --build-base /home/gavin/ros2_ws/build/awc_bringup/build install --record /home/gavin/ros2_ws/build/awc_bringup/install.log --single-version-externally-managed install_data
+[0.970s] running egg_info
+[0.980s] writing ../build/awc_bringup/awc_bringup.egg-info/PKG-INFO
+[0.980s] writing dependency_links to ../build/awc_bringup/awc_bringup.egg-info/dependency_links.txt
+[0.980s] writing requirements to ../build/awc_bringup/awc_bringup.egg-info/requires.txt
+[0.980s] writing top-level names to ../build/awc_bringup/awc_bringup.egg-info/top_level.txt
+[1.001s] reading manifest file '../build/awc_bringup/awc_bringup.egg-info/SOURCES.txt'
+[1.002s] writing manifest file '../build/awc_bringup/awc_bringup.egg-info/SOURCES.txt'
+[1.002s] running build
+[1.002s] running build_py
+[1.002s] running install
+[1.007s] running install_lib
+[1.019s] running install_data
+[1.019s] copying launch/awc_gazebo.launch.py -> /home/gavin/ros2_ws/install/awc_bringup/share/awc_bringup/launch
+[1.019s] running install_egg_info
+[1.031s] removing '/home/gavin/ros2_ws/install/awc_bringup/lib/python3.10/site-packages/awc_bringup-0.0.0-py3.10.egg-info' (and everything under it)
+[1.031s] Copying ../build/awc_bringup/awc_bringup.egg-info to /home/gavin/ros2_ws/install/awc_bringup/lib/python3.10/site-packages/awc_bringup-0.0.0-py3.10.egg-info
+[1.033s] running install_scripts
+[1.140s] writing list of installed files to '/home/gavin/ros2_ws/build/awc_bringup/install.log'
+[1.164s] Invoked command in '/home/gavin/ros2_ws/awc_bringup' returned '0': PYTHONPATH=/home/gavin/ros2_ws/build/awc_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/awc_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/awc_bringup build --build-base /home/gavin/ros2_ws/build/awc_bringup/build install --record /home/gavin/ros2_ws/build/awc_bringup/install.log --single-version-externally-managed install_data

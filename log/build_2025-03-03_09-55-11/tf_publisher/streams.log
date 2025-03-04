@@ -1,0 +1,43 @@
+[0.802s] Invoking command in '/home/gavin/ros2_ws/src/tf_publisher': PYTHONPATH=/home/gavin/ros2_ws/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_publisher build --build-base /home/gavin/ros2_ws/build/tf_publisher/build install --record /home/gavin/ros2_ws/build/tf_publisher/install.log --single-version-externally-managed install_data
+[0.982s] /home/gavin/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py:270: UserWarning: Unknown distribution option: 'tests_require'
+[0.982s]   warnings.warn(msg)
+[1.053s] running egg_info
+[1.063s] creating ../../build/tf_publisher/tf_publisher.egg-info
+[1.063s] writing ../../build/tf_publisher/tf_publisher.egg-info/PKG-INFO
+[1.063s] writing dependency_links to ../../build/tf_publisher/tf_publisher.egg-info/dependency_links.txt
+[1.063s] writing entry points to ../../build/tf_publisher/tf_publisher.egg-info/entry_points.txt
+[1.063s] writing requirements to ../../build/tf_publisher/tf_publisher.egg-info/requires.txt
+[1.063s] writing top-level names to ../../build/tf_publisher/tf_publisher.egg-info/top_level.txt
+[1.064s] writing manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[1.085s] reading manifest file '../../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[1.085s] Traceback (most recent call last):
+[1.085s]   File "/home/gavin/ros2_ws/src/tf_publisher/setup.py", line 5, in <module>
+[1.085s]     setup(
+[1.085s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 117, in setup
+[1.085s]     return distutils.core.setup(**attrs)
+[1.085s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 186, in setup
+[1.086s]     return run_commands(dist)
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_distutils/core.py", line 202, in run_commands
+[1.086s]     dist.run_commands()
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 983, in run_commands
+[1.086s]     self.run_command(cmd)
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/dist.py", line 999, in run_command
+[1.086s]     super().run_command(command)
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_distutils/dist.py", line 1002, in run_command
+[1.086s]     cmd_obj.run()
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 312, in run
+[1.086s]     self.find_sources()
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 320, in find_sources
+[1.086s]     mm.run()
+[1.086s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/command/egg_info.py", line 548, in run
+[1.087s]     self.prune_file_list()
+[1.087s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/command/sdist.py", line 162, in prune_file_list
+[1.087s]     super().prune_file_list()
+[1.087s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_distutils/command/sdist.py", line 380, in prune_file_list
+[1.087s]     base_dir = self.distribution.get_fullname()
+[1.087s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 272, in get_fullname
+[1.087s]     return _distribution_fullname(self.get_name(), self.get_version())
+[1.087s]   File "/home/gavin/.local/lib/python3.10/site-packages/setuptools/_core_metadata.py", line 290, in _distribution_fullname
+[1.087s]     canonicalize_version(version, strip_trailing_zero=False),
+[1.087s] TypeError: canonicalize_version() got an unexpected keyword argument 'strip_trailing_zero'
+[1.106s] Invoked command in '/home/gavin/ros2_ws/src/tf_publisher' returned '1': PYTHONPATH=/home/gavin/ros2_ws/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tf_publisher build --build-base /home/gavin/ros2_ws/build/tf_publisher/build install --record /home/gavin/ros2_ws/build/tf_publisher/install.log --single-version-externally-managed install_data

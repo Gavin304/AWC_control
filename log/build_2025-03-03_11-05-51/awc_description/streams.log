@@ -1,0 +1,20 @@
+[0.162s] Invoking command in '/home/gavin/ros2_ws/build/awc_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/awc_description -- -j4 -l4
+[0.316s] Invoked command in '/home/gavin/ros2_ws/build/awc_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/awc_description -- -j4 -l4
+[0.328s] Invoking command in '/home/gavin/ros2_ws/build/awc_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/awc_description
+[0.333s] -- Install configuration: ""
+[0.335s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/ament_index/resource_index/package_run_dependencies/awc_description
+[0.335s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/ament_index/resource_index/parent_prefix_path/awc_description
+[0.335s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/environment/ament_prefix_path.sh
+[0.335s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/environment/ament_prefix_path.dsv
+[0.335s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/environment/path.sh
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/environment/path.dsv
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/local_setup.bash
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/local_setup.sh
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/local_setup.zsh
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/local_setup.dsv
+[0.336s] -- Installing: /home/gavin/ros2_ws/install/awc_description/share/awc_description/package.dsv
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/ament_index/resource_index/packages/awc_description
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/cmake/awc_descriptionConfig.cmake
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/cmake/awc_descriptionConfig-version.cmake
+[0.336s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_description/share/awc_description/package.xml
+[0.340s] Invoked command in '/home/gavin/ros2_ws/build/awc_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/awc_description

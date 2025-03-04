@@ -52,6 +52,7 @@ class AWCTFBroadcaster(Node):
         self.timer_ = self.create_timer(0.1, self.timerCallback)
 
         # Subscribe to cmd_vel topic
+        '''LATER CHANGE THIS TO SUBSCRIBE FROM ENCODER'''
         self.cmd_vel_joy_subscription_ = self.create_subscription(
             Twist,
             "/cmd_vel_joy",
@@ -64,6 +65,7 @@ class AWCTFBroadcaster(Node):
             self.cmdVelCallback,
             10
         )
+        # Subscriber from Encoder
         
 
         # Service Server
@@ -91,8 +93,8 @@ class AWCTFBroadcaster(Node):
         # Update pose based on velocities
         self.last_theta_ += self.angular_velocity_z_ * dt
         self.last_theta_ = self.last_theta_ % (2 * np.pi)  # Keep theta in [0, 2π]
-        self.last_x_ += (self.linear_velocity_x_ * np.cos(self.last_theta_) - self.linear_velocity_y_ * np.sin(self.last_theta_)) * dt
-        self.last_y_ += (self.linear_velocity_x_ * np.sin(self.last_theta_) + self.linear_velocity_y_ * np.cos(self.last_theta_)) * dt
+        self.last_x_ += self.wheel_radius_ *(self.wheel_speed_R + self.wheel_speed_L)/2 * np.cos(self.last_theta_) * dt #Differential Drive Kinematics
+        self.last_y_ += self.wheel_radius_ *(self.wheel_speed_R + self.wheel_speed_L)/2 * np.sin(self.last_theta_) * dt #Differential Drive Kinematics
 
         # Convert updated orientation to quaternion
         q = quaternion_from_euler(0, 0, self.last_theta_)

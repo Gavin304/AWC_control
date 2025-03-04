@@ -1,0 +1,20 @@
+[0.191s] Invoking command in '/home/gavin/ros2_ws/build/awc_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/awc_msgs -- -j4 -l4
+[0.343s] Invoked command in '/home/gavin/ros2_ws/build/awc_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/awc_msgs -- -j4 -l4
+[0.351s] Invoking command in '/home/gavin/ros2_ws/build/awc_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/awc_msgs
+[0.359s] -- Install configuration: ""
+[0.359s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/package_run_dependencies/awc_msgs
+[0.359s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/parent_prefix_path/awc_msgs
+[0.359s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/ament_prefix_path.sh
+[0.359s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/ament_prefix_path.dsv
+[0.359s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/path.sh
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/path.dsv
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.bash
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.sh
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.zsh
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.dsv
+[0.360s] -- Installing: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/package.dsv
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/packages/awc_msgs
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgsConfig.cmake
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgsConfig-version.cmake
+[0.360s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/package.xml
+[0.365s] Invoked command in '/home/gavin/ros2_ws/build/awc_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/awc_bringup:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/awc_msgs

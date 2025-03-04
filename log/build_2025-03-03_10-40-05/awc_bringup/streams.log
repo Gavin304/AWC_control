@@ -1,0 +1,16 @@
+[0.781s] Invoking command in '/home/gavin/ros2_ws/awc_bringup': PYTHONPATH=/home/gavin/ros2_ws/build/awc_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/awc_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/awc_bringup build --build-base /home/gavin/ros2_ws/build/awc_bringup/build install --record /home/gavin/ros2_ws/build/awc_bringup/install.log --single-version-externally-managed install_data
+[0.949s] running egg_info
+[0.959s] writing ../build/awc_bringup/awc_bringup.egg-info/PKG-INFO
+[0.959s] writing dependency_links to ../build/awc_bringup/awc_bringup.egg-info/dependency_links.txt
+[0.959s] writing requirements to ../build/awc_bringup/awc_bringup.egg-info/requires.txt
+[0.959s] writing top-level names to ../build/awc_bringup/awc_bringup.egg-info/top_level.txt
+[0.980s] reading manifest file '../build/awc_bringup/awc_bringup.egg-info/SOURCES.txt'
+[0.981s] writing manifest file '../build/awc_bringup/awc_bringup.egg-info/SOURCES.txt'
+[0.981s] running build
+[0.981s] running build_py
+[0.981s] running install
+[0.986s] running install_lib
+[0.997s] running install_data
+[0.997s] error: can't copy 'awc_gazebo.launch.py': doesn't exist or not a regular file
+[0.997s] creating /home/gavin/ros2_ws/install/awc_bringup/share/awc_bringup/launch
+[1.015s] Invoked command in '/home/gavin/ros2_ws/awc_bringup' returned '1': PYTHONPATH=/home/gavin/ros2_ws/build/awc_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/ros2_ws/install/awc_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/awc_bringup build --build-base /home/gavin/ros2_ws/build/awc_bringup/build install --record /home/gavin/ros2_ws/build/awc_bringup/install.log --single-version-externally-managed install_data

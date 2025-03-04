@@ -22,5 +22,8 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/GetTransform.srv"
+  DEPENDENCIES geometry_msgs
+)
 ament_package()

@@ -14,12 +14,13 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='gavin',
-    maintainer_email='gavin@todo.todo',
+    maintainer_email='gavin.arpandy@gmail.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "tf_broadcaster.py = tf_publisher.tf_broadcaster:main",
         ],
     },
 )
