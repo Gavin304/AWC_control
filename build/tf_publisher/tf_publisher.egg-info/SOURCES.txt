@@ -13,4 +13,5 @@ test/test_copyright.py
 test/test_flake8.py
 test/test_pep257.py
 tf_publisher/__init__.py
+tf_publisher/tf2_broadcaster.py
 tf_publisher/tf_broadcaster.py

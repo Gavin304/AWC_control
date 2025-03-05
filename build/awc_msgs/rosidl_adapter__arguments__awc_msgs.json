@@ -1,0 +1,6 @@
+{
+  "package_name": "awc_msgs",
+  "non_idl_tuples": [
+    "/home/gavin/ros2_ws/src/awc_msgs:srv/GetTransform.srv"
+  ]
+}

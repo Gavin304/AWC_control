@@ -1,2 +1,3 @@
 [console_scripts]
+tf2_broadcaster.py = tf_publisher.tf2_broadcaster:main
 tf_broadcaster.py = tf_publisher.tf_broadcaster:main

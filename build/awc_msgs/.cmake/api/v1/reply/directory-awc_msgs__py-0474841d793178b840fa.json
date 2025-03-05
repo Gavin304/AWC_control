@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "awc_msgs__py",
+		"source" : "/home/gavin/ros2_ws/build/awc_msgs/awc_msgs__py"
+	}
+}

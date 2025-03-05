@@ -1,0 +1,151 @@
+[0.021s] Invoking command in '/home/gavin/ros2_ws/build/awc_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/awc_msgs -- -j4 -l4
+[0.096s] [  3%] Built target awc_msgs__cpp
+[0.097s] [ 12%] Built target awc_msgs__rosidl_generator_c
+[0.126s] [ 12%] Built target ament_cmake_python_copy_awc_msgs
+[0.153s] [ 22%] Built target awc_msgs__rosidl_typesupport_fastrtps_cpp
+[0.182s] [ 32%] Built target awc_msgs__rosidl_typesupport_cpp
+[0.184s] [ 41%] Built target awc_msgs__rosidl_typesupport_c
+[0.187s] [ 51%] Built target awc_msgs__rosidl_typesupport_introspection_c
+[0.239s] [ 61%] Built target awc_msgs__rosidl_typesupport_introspection_cpp
+[0.249s] [ 70%] Built target awc_msgs__rosidl_typesupport_fastrtps_c
+[0.276s] [ 70%] Built target awc_msgs
+[0.305s] [ 74%] Built target awc_msgs__py
+[0.339s] [ 80%] Built target awc_msgs__rosidl_generator_py
+[0.397s] [ 87%] Built target awc_msgs__rosidl_typesupport_c__pyext
+[0.398s] [ 93%] Built target awc_msgs__rosidl_typesupport_introspection_c__pyext
+[0.411s] [100%] Built target awc_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.570s] running egg_info
+[0.597s] writing awc_msgs.egg-info/PKG-INFO
+[0.598s] writing dependency_links to awc_msgs.egg-info/dependency_links.txt
+[0.599s] writing top-level names to awc_msgs.egg-info/top_level.txt
+[0.679s] reading manifest file 'awc_msgs.egg-info/SOURCES.txt'
+[0.686s] writing manifest file 'awc_msgs.egg-info/SOURCES.txt'
+[0.751s] [100%] Built target ament_cmake_python_build_awc_msgs_egg
+[0.789s] Invoked command in '/home/gavin/ros2_ws/build/awc_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --build /home/gavin/ros2_ws/build/awc_msgs -- -j4 -l4
+[0.790s] Invoking command in '/home/gavin/ros2_ws/build/awc_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/awc_msgs
+[0.800s] -- Install configuration: ""
+[0.801s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/rosidl_interfaces/awc_msgs
+[0.803s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs
+[0.803s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/get_transform.h
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__functions.c
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__functions.h
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__struct.h
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__type_support.h
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/library_path.sh
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/library_path.dsv
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_generator_c.so
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv
+[0.805s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail
+[0.807s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__rosidl_typesupport_fastrtps_c.h
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_typesupport_fastrtps_c.so
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/get_transform.hpp
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__type_support.hpp
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__traits.hpp
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__builder.hpp
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__struct.hpp
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg
+[0.809s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.810s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs
+[0.810s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__rosidl_typesupport_fastrtps_cpp.hpp
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/dds_fastrtps
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail
+[0.813s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__rosidl_typesupport_introspection_c.h
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__type_support.c
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_typesupport_introspection_c.so
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_typesupport_c.so
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv
+[0.815s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__rosidl_typesupport_introspection_cpp.hpp
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/include/awc_msgs/awc_msgs/srv/detail/get_transform__type_support.cpp
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_typesupport_introspection_cpp.so
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_typesupport_cpp.so
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/pythonpath.sh
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/pythonpath.dsv
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs-0.0.0-py3.10.egg-info
+[0.816s] -- Installing: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[0.816s] -- Installing: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.816s] -- Installing: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.816s] -- Installing: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/_awc_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/__init__.py
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/_awc_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.816s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/awc_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/awc_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/_awc_msgs_s.ep.rosidl_typesupport_c.c
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/srv
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/srv/_get_transform.py
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/srv/__init__.py
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/srv/_get_transform_s.c
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/libawc_msgs__rosidl_generator_py.so
+[0.817s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/awc_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.878s] Listing '/home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs'...
+[0.878s] Listing '/home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/srv'...
+[0.884s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/awc_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.884s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/awc_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.884s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/local/lib/python3.10/dist-packages/awc_msgs/awc_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/lib/libawc_msgs__rosidl_generator_py.so
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/srv/GetTransform.idl
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/srv/GetTransform.srv
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/srv/GetTransform_Request.msg
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/srv/GetTransform_Response.msg
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/package_run_dependencies/awc_msgs
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/parent_prefix_path/awc_msgs
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/ament_prefix_path.sh
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/ament_prefix_path.dsv
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/path.sh
+[0.885s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/environment/path.dsv
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.bash
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.sh
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.zsh
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/local_setup.dsv
+[0.886s] -- Installing: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/package.dsv
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/ament_index/resource_index/packages/awc_msgs
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_generator_cExport.cmake
+[0.886s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.887s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.887s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.887s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_generator_cppExport.cmake
+[0.887s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_cExport.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_cppExport.cmake
+[0.888s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_generator_pyExport.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/export_awc_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/rosidl_cmake-extras.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.889s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.891s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgsConfig.cmake
+[0.891s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/cmake/awc_msgsConfig-version.cmake
+[0.892s] -- Up-to-date: /home/gavin/ros2_ws/install/awc_msgs/share/awc_msgs/package.xml
+[0.892s] Invoked command in '/home/gavin/ros2_ws/build/awc_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/ros2_ws/install/tf_publisher:/opt/ros/humble /usr/bin/cmake --install /home/gavin/ros2_ws/build/awc_msgs

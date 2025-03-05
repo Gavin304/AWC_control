@@ -4,8 +4,6 @@
 /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.stl
 /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.2.part
 /home/gavin/ros2_ws/install/robot_description/share/robot_description/meshes/part_1.2.stl
-/home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/bumperbot.urdf.xacro
-/home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/bumperbot_gazebo.xacro
 /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/robot_gazebo.xacro
 /home/gavin/ros2_ws/install/robot_description/share/robot_description/urdf/robot.urdf.xacro
 /home/gavin/ros2_ws/install/robot_description/share/robot_description/rviz/display.rviz

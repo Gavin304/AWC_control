@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             "tf_broadcaster.py = tf_publisher.tf_broadcaster:main",
+            "tf2_broadcaster.py = tf_publisher.tf2_broadcaster:main",
         ],
     },
 )
