@@ -1,0 +1,5 @@
+build/
+install/
+humanoid_gpt/
+log/
+.env
