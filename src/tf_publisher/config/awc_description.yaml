@@ -1,0 +1,5 @@
+# awc_description.yaml
+# This file contains the description of the AWC Robot model.
+
+wheel_radius: 0.1
+wheel_separation: 0.5

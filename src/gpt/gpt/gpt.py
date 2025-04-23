@@ -9,6 +9,7 @@ import re
 import json
 import openai
 from dotenv import load_dotenv
+from geometry_msgs.msg import PoseStamped  # Import PoseStamped message
 
 # Load environment variables from .env file
 load_dotenv()
@@ -25,18 +26,34 @@ audio_files_path = os.path.join(package_share_directory, 'audio_files')
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
 
 class GPTNode(Node):
     def __init__(self):
         super().__init__('gpt_node')
-        self.publisher_ = self.create_publisher(String, '/chatgpt_command', 10)
+        self.publisher_ = self.create_publisher(PoseStamped, '/navigate_pose', 10)  # Change topic to PoseStamped
 
-    def publish_navigation_command(self, command_json):
-        msg = String()
-        msg.data = command_json
+    def publish_navigation_command(self, pose_data):
+        """
+        Publish a PoseStamped message to the /navigation_pose topic.
+        :param pose_data: A dictionary containing pose information with keys x, y, z, and orientation (qx, qy, qz, qw).
+        """
+        msg = PoseStamped()
+        msg.header.stamp = self.get_clock().now().to_msg()  # Add timestamp
+        msg.header.frame_id = "map"  # Set the frame of reference (e.g., "map")
+
+        # Set position
+        msg.pose.position.x = pose_data["x"]
+        msg.pose.position.y = pose_data["y"]
+        msg.pose.position.z = pose_data["z"]
+
+        # Set orientation
+        msg.pose.orientation.x = pose_data["orientation"]["qx"]
+        msg.pose.orientation.y = pose_data["orientation"]["qy"]
+        msg.pose.orientation.z = pose_data["orientation"]["qz"]
+        msg.pose.orientation.w = pose_data["orientation"]["qw"]
+
         self.publisher_.publish(msg)
-        self.get_logger().info(f'Published navigation command: {command_json}')
+        self.get_logger().info(f'Published PoseStamped: {msg}')
 
 with open(os.path.join(os.path.dirname(__file__), "prompt.txt"), "r") as file:
     system_prompt = file.read()
@@ -92,16 +109,35 @@ def run_gpt():
                     
                     # Parse the JSON to extract pose target
                     command_data = json.loads(command_json)
-                    if "pose" in command_data:
-                        pose = command_data["pose"]
-                        if all(key in pose for key in ["x", "y", "z", "orientation"]):
-                            # Publish the pose target to Nav2
-                            gpt_node.publish_navigation_command(json.dumps(pose))
-                            print(f"Published pose target: {pose}")
+                    if "target_locations" in command_data:
+                        target_locations = command_data["target_locations"]
+                        if len(target_locations) > 0:
+                            target = target_locations[0]  # Assuming the first target location
+                            if "pose" in target:
+                                pose_array = target["pose"]
+                                if len(pose_array) == 7:  # Ensure the pose array has 7 elements
+                                    pose = {
+                                        "x": pose_array[0],
+                                        "y": pose_array[1],
+                                        "z": pose_array[2],
+                                        "orientation": {
+                                            "qx": pose_array[3],
+                                            "qy": pose_array[4],
+                                            "qz": pose_array[5],
+                                            "qw": pose_array[6],
+                                        }
+                                    }
+                                    # Publish the pose target as PoseStamped
+                                    gpt_node.publish_navigation_command(pose)
+                                    print(f"Published PoseStamped target: {pose}")
+                                else:
+                                    print("Error: Pose array does not have exactly 7 elements")
+                            else:
+                                print("Error: Target location does not contain a 'pose' key")
                         else:
-                            print("Error: Pose target is missing required fields (x, y, z, orientation)")
+                            print("Error: No target locations found in JSON")
                     else:
-                        print("Error: JSON does not contain a 'pose' key")
+                        print("Error: JSON does not contain 'target_locations'")
                 except (ValueError, json.JSONDecodeError) as e:
                     print(f"Error extracting or parsing JSON: {e}")
 
