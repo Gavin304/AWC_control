@@ -18,7 +18,7 @@ For any other requests, respond:
 
 ### Navigation Instructions:
 When the user asks you to navigate to a location, respond in the following JSON format:
-```json
+```
 {
     "command": {
         "navigate": true
