@@ -26,7 +26,6 @@ audio_files_path = os.path.join(package_share_directory, 'audio_files')
 
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
 
 class GPTNode(Node):
     def __init__(self):
