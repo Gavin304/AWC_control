@@ -10,7 +10,7 @@ import json
 import openai
 from dotenv import load_dotenv
 from geometry_msgs.msg import PoseStamped  # Import PoseStamped message
-from gpt_interfaces.msg import NavigationCommand  # Import the custom message
+from awc_interfaces.msg import NavigationCommand  # Import the custom message
 
 # Load environment variables from .env file
 load_dotenv()
