@@ -89,7 +89,19 @@ def run_gpt():
                     json_start = chat_response.index('{')
                     json_end = chat_response.rindex('}') + 1
                     command_json = chat_response[json_start:json_end]
-                    gpt_node.publish_navigation_command(command_json)
+                    
+                    # Parse the JSON to extract pose target
+                    command_data = json.loads(command_json)
+                    if "pose" in command_data:
+                        pose = command_data["pose"]
+                        if all(key in pose for key in ["x", "y", "z", "orientation"]):
+                            # Publish the pose target to Nav2
+                            gpt_node.publish_navigation_command(json.dumps(pose))
+                            print(f"Published pose target: {pose}")
+                        else:
+                            print("Error: Pose target is missing required fields (x, y, z, orientation)")
+                    else:
+                        print("Error: JSON does not contain a 'pose' key")
                 except (ValueError, json.JSONDecodeError) as e:
                     print(f"Error extracting or parsing JSON: {e}")
 
