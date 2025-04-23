@@ -10,6 +10,7 @@ import json
 import openai
 from dotenv import load_dotenv
 from geometry_msgs.msg import PoseStamped  # Import PoseStamped message
+from awc_interfaces.msg import NavigationCommand  # Import the custom message
 
 # Load environment variables from .env file
 load_dotenv()
@@ -30,30 +31,30 @@ from rclpy.node import Node
 class GPTNode(Node):
     def __init__(self):
         super().__init__('gpt_node')
-        self.publisher_ = self.create_publisher(PoseStamped, '/navigate_pose', 10)  # Change topic to PoseStamped
+        self.publisher_ = self.create_publisher(NavigationCommand, '/navigate_command', 10)
 
-    def publish_navigation_command(self, pose_data):
+    def publish_navigation_command(self, pose_data, navigate):
         """
-        Publish a PoseStamped message to the /navigation_pose topic.
-        :param pose_data: A dictionary containing pose information with keys x, y, z, and orientation (qx, qy, qz, qw).
+        Publish a NavigationCommand message to the /navigate_command topic.
+        :param pose_data: A dictionary containing pose information.
+        :param navigate: A boolean indicating whether to start or stop navigation.
         """
-        msg = PoseStamped()
-        msg.header.stamp = self.get_clock().now().to_msg()  # Add timestamp
-        msg.header.frame_id = "map"  # Set the frame of reference (e.g., "map")
+        msg = NavigationCommand()
+        msg.navigate = navigate
 
-        # Set position
-        msg.pose.position.x = pose_data["x"]
-        msg.pose.position.y = pose_data["y"]
-        msg.pose.position.z = pose_data["z"]
-
-        # Set orientation
-        msg.pose.orientation.x = pose_data["orientation"]["qx"]
-        msg.pose.orientation.y = pose_data["orientation"]["qy"]
-        msg.pose.orientation.z = pose_data["orientation"]["qz"]
-        msg.pose.orientation.w = pose_data["orientation"]["qw"]
+        # Fill PoseStamped data
+        msg.pose.header.stamp = self.get_clock().now().to_msg()
+        msg.pose.header.frame_id = "map"
+        msg.pose.pose.position.x = pose_data["x"]
+        msg.pose.pose.position.y = pose_data["y"]
+        msg.pose.pose.position.z = pose_data["z"]
+        msg.pose.pose.orientation.x = pose_data["orientation"]["qx"]
+        msg.pose.pose.orientation.y = pose_data["orientation"]["qy"]
+        msg.pose.pose.orientation.z = pose_data["orientation"]["qz"]
+        msg.pose.pose.orientation.w = pose_data["orientation"]["qw"]
 
         self.publisher_.publish(msg)
-        self.get_logger().info(f'Published PoseStamped: {msg}')
+        self.get_logger().info(f'Published NavigationCommand: {msg}')
 
 with open(os.path.join(os.path.dirname(__file__), "prompt.txt"), "r") as file:
     system_prompt = file.read()
@@ -109,35 +110,40 @@ def run_gpt():
                     
                     # Parse the JSON to extract pose target
                     command_data = json.loads(command_json)
-                    if "target_locations" in command_data:
-                        target_locations = command_data["target_locations"]
-                        if len(target_locations) > 0:
-                            target = target_locations[0]  # Assuming the first target location
-                            if "pose" in target:
-                                pose_array = target["pose"]
-                                if len(pose_array) == 7:  # Ensure the pose array has 7 elements
-                                    pose = {
-                                        "x": pose_array[0],
-                                        "y": pose_array[1],
-                                        "z": pose_array[2],
-                                        "orientation": {
-                                            "qx": pose_array[3],
-                                            "qy": pose_array[4],
-                                            "qz": pose_array[5],
-                                            "qw": pose_array[6],
+                    if "command" in command_data and "navigate" in command_data["command"]:
+                        navigate = command_data["command"]["navigate"]
+                        if navigate and "target_locations" in command_data:
+                            target_locations = command_data["target_locations"]
+                            if len(target_locations) > 0:
+                                target = target_locations[0]  # Assuming the first target location
+                                if "pose" in target:
+                                    pose_array = target["pose"]
+                                    if len(pose_array) == 7:  # Ensure the pose array has 7 elements
+                                        pose = {
+                                            "x": pose_array[0],
+                                            "y": pose_array[1],
+                                            "z": pose_array[2],
+                                            "orientation": {
+                                                "qx": pose_array[3],
+                                                "qy": pose_array[4],
+                                                "qz": pose_array[5],
+                                                "qw": pose_array[6],
+                                            }
                                         }
-                                    }
-                                    # Publish the pose target as PoseStamped
-                                    gpt_node.publish_navigation_command(pose)
-                                    print(f"Published PoseStamped target: {pose}")
+                                        # Publish the pose target as NavigationCommand
+                                        gpt_node.publish_navigation_command(pose, navigate)
+                                        print(f"Published NavigationCommand target: {pose}")
+                                    else:
+                                        print("Error: Pose array does not have exactly 7 elements")
                                 else:
-                                    print("Error: Pose array does not have exactly 7 elements")
+                                    print("Error: Target location does not contain a 'pose' key")
                             else:
-                                print("Error: Target location does not contain a 'pose' key")
-                        else:
-                            print("Error: No target locations found in JSON")
+                                print("Error: No target locations found in JSON")
+                        elif not navigate:
+                            # Stop navigation
+                            gpt_node.publish_navigation_command({}, navigate)
                     else:
-                        print("Error: JSON does not contain 'target_locations'")
+                        print("Error: JSON does not contain 'command' or 'navigate'")
                 except (ValueError, json.JSONDecodeError) as e:
                     print(f"Error extracting or parsing JSON: {e}")
 
