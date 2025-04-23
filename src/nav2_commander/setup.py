@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'nav2_command = nav2_commander.nav2_commander:main'
         ],
     },
 )

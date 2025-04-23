@@ -109,20 +109,35 @@ def run_gpt():
                     
                     # Parse the JSON to extract pose target
                     command_data = json.loads(command_json)
-                    if "pose" in command_data:
-                        pose = command_data["pose"]
-                        if all(key in pose for key in ["x", "y", "z", "orientation"]):
-                            # Ensure orientation contains qx, qy, qz, qw
-                            if all(key in pose["orientation"] for key in ["qx", "qy", "qz", "qw"]):
-                                # Publish the pose target as PoseStamped
-                                gpt_node.publish_navigation_command(pose)
-                                print(f"Published PoseStamped target: {pose}")
+                    if "target_locations" in command_data:
+                        target_locations = command_data["target_locations"]
+                        if len(target_locations) > 0:
+                            target = target_locations[0]  # Assuming the first target location
+                            if "pose" in target:
+                                pose_array = target["pose"]
+                                if len(pose_array) == 7:  # Ensure the pose array has 7 elements
+                                    pose = {
+                                        "x": pose_array[0],
+                                        "y": pose_array[1],
+                                        "z": pose_array[2],
+                                        "orientation": {
+                                            "qx": pose_array[3],
+                                            "qy": pose_array[4],
+                                            "qz": pose_array[5],
+                                            "qw": pose_array[6],
+                                        }
+                                    }
+                                    # Publish the pose target as PoseStamped
+                                    gpt_node.publish_navigation_command(pose)
+                                    print(f"Published PoseStamped target: {pose}")
+                                else:
+                                    print("Error: Pose array does not have exactly 7 elements")
                             else:
-                                print("Error: Orientation is missing required fields (qx, qy, qz, qw)")
+                                print("Error: Target location does not contain a 'pose' key")
                         else:
-                            print("Error: Pose target is missing required fields (x, y, z, orientation)")
+                            print("Error: No target locations found in JSON")
                     else:
-                        print("Error: JSON does not contain a 'pose' key")
+                        print("Error: JSON does not contain 'target_locations'")
                 except (ValueError, json.JSONDecodeError) as e:
                     print(f"Error extracting or parsing JSON: {e}")
 
