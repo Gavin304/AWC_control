@@ -61,5 +61,6 @@ def text_to_speech(text, filename=None):
 
 def play_audio(filename=os.path.join(audio_files_path, "output_fixed.wav")):
     if not os.path.exists(filename):
+        print(f"File not found: {filename}")
         return
     os.system(f"aplay {filename}")
