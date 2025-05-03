@@ -22,3 +22,18 @@ add_executable(example_lidar_serial
     examples/example_lidar_serial.cpp
 )
 target_link_libraries(example_lidar_serial  libunitree_lidar_sdk.a  )
+
+# Install the library
+install(FILES lib/${CMAKE_SYSTEM_PROCESSOR}/libunitree_lidar_sdk.a
+  DESTINATION lib/${CMAKE_SYSTEM_PROCESSOR}
+)
+
+# Install the headers
+install(DIRECTORY include/
+  DESTINATION include
+)
+
+# Install the executables
+install(TARGETS example_lidar_udp example_lidar_serial
+  RUNTIME DESTINATION bin
+)
