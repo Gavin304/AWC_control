@@ -1,5 +1,5 @@
-build/
-install/
-humanoid_gpt/
-log/
+build/**
+install/**
+log/**
 .env
+src/joystick_ros2/
