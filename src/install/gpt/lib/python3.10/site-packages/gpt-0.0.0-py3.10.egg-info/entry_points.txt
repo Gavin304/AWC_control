@@ -1,4 +1,0 @@
-[console_scripts]
-audio = gpt.audio:main
-gpt_node = gpt.gpt:main
-

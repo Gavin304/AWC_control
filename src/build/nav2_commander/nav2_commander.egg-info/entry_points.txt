@@ -1,3 +1,0 @@
-[console_scripts]
-nav2_command = nav2_commander.nav2_commander:main
-

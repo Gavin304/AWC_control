@@ -1,3 +1,0 @@
-[console_scripts]
-ros2arduino = ros2arduino.ros2arduino:main
-

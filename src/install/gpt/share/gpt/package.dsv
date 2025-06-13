@@ -1,6 +1,0 @@
-source;share/gpt/hook/pythonpath.ps1
-source;share/gpt/hook/pythonpath.dsv
-source;share/gpt/hook/pythonpath.sh
-source;share/gpt/hook/ament_prefix_path.ps1
-source;share/gpt/hook/ament_prefix_path.dsv
-source;share/gpt/hook/ament_prefix_path.sh
