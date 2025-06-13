@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/awc_bringup/awc_bringup.egg-info/PKG-INFO
+../build/awc_bringup/awc_bringup.egg-info/SOURCES.txt
+../build/awc_bringup/awc_bringup.egg-info/dependency_links.txt
+../build/awc_bringup/awc_bringup.egg-info/entry_points.txt
+../build/awc_bringup/awc_bringup.egg-info/requires.txt
+../build/awc_bringup/awc_bringup.egg-info/top_level.txt
+../build/awc_bringup/awc_bringup.egg-info/zip-safe
+awc_bringup/__init__.py
+launch/lidar_launcher.py
+resource/awc_bringup
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,22 @@
+[4.732s] Invoking command in '/home/gavin/AWC_control/src/joystick_ros2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/joystick_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joystick_ros2 build --build-base /home/gavin/AWC_control/src/build/joystick_ros2/build install --record /home/gavin/AWC_control/src/build/joystick_ros2/install.log --single-version-externally-managed install_data
+[5.538s] running egg_info
+[5.539s] writing ../build/joystick_ros2/joystick_ros2.egg-info/PKG-INFO
+[5.539s] writing dependency_links to ../build/joystick_ros2/joystick_ros2.egg-info/dependency_links.txt
+[5.540s] writing entry points to ../build/joystick_ros2/joystick_ros2.egg-info/entry_points.txt
+[5.541s] writing requirements to ../build/joystick_ros2/joystick_ros2.egg-info/requires.txt
+[5.544s] writing top-level names to ../build/joystick_ros2/joystick_ros2.egg-info/top_level.txt
+[5.548s] reading manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[5.549s] adding license file 'LICENSE'
+[5.551s] writing manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[5.553s] running build
+[5.553s] running build_py
+[5.556s] running install
+[5.556s] running install_lib
+[5.561s] running install_data
+[5.563s] running install_egg_info
+[5.567s] removing '/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2-0.0.1-py3.10.egg-info' (and everything under it)
+[5.570s] Copying ../build/joystick_ros2/joystick_ros2.egg-info to /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2-0.0.1-py3.10.egg-info
+[5.571s] running install_scripts
+[5.631s] Installing joystick_ros2 script to /home/gavin/AWC_control/src/install/joystick_ros2/lib/joystick_ros2
+[5.633s] writing list of installed files to '/home/gavin/AWC_control/src/build/joystick_ros2/install.log'
+[5.738s] Invoked command in '/home/gavin/AWC_control/src/joystick_ros2' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/joystick_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joystick_ros2 build --build-base /home/gavin/AWC_control/src/build/joystick_ros2/build install --record /home/gavin/AWC_control/src/build/joystick_ros2/install.log --single-version-externally-managed install_data

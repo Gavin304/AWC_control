@@ -1,0 +1,8 @@
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/example_lidar_udp.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/example_lidar_serial.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/edit_cache.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/rebuild_cache.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/list_install_components.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/install.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/install/local.dir
+/home/gavin/AWC_control/src/build/unitree_lidar_sdk/CMakeFiles/install/strip.dir

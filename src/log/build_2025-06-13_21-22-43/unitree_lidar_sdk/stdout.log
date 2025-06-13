@@ -1,0 +1,35 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gavin/AWC_control/src/build/unitree_lidar_sdk
+[ 25%] [32mBuilding CXX object CMakeFiles/example_lidar_udp.dir/examples/example_lidar_udp.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/example_lidar_serial.dir/examples/example_lidar_serial.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable /home/gavin/AWC_control/src/unitree_lidar_sdk/bin/example_lidar_serial[0m
+[100%] [32m[1mLinking CXX executable /home/gavin/AWC_control/src/unitree_lidar_sdk/bin/example_lidar_udp[0m
+[100%] Built target example_lidar_serial
+[100%] Built target example_lidar_udp
+-- Install configuration: "Release"
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/lib/x86_64/libunitree_lidar_sdk.a
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_sdk.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_sdk_pcl.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/udp_handler.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_utilities.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_protocol.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_sdk_config.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/example.h
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/bin/example_lidar_udp
+-- Set runtime path of "/home/gavin/AWC_control/src/install/unitree_lidar_sdk/bin/example_lidar_udp" to ""
+-- Installing: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/bin/example_lidar_serial
+-- Set runtime path of "/home/gavin/AWC_control/src/install/unitree_lidar_sdk/bin/example_lidar_serial" to ""

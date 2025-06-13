@@ -1,0 +1,3 @@
+[console_scripts]
+js2fork = js2fork.js2fork:main
+
