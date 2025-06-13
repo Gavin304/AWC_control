@@ -1,0 +1,20 @@
+[0.092s] Invoking command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/unitree_lidar_sdk -- -j8 -l8
+[0.169s] [35m[1mConsolidate compiler generated dependencies of target example_lidar_udp[0m
+[0.170s] [35m[1mConsolidate compiler generated dependencies of target example_lidar_serial[0m
+[0.196s] [100%] Built target example_lidar_serial
+[0.196s] [100%] Built target example_lidar_udp
+[0.219s] Invoked command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/unitree_lidar_sdk -- -j8 -l8
+[0.221s] Invoking command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/gavin/AWC_control/src/build/unitree_lidar_sdk
+[0.237s] -- Install configuration: "Release"
+[0.237s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/lib/x86_64/libunitree_lidar_sdk.a
+[0.237s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include
+[0.237s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_sdk.h
+[0.237s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_sdk_pcl.h
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/udp_handler.h
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_utilities.h
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_protocol.h
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/unitree_lidar_sdk_config.h
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/include/example.h
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/bin/example_lidar_udp
+[0.238s] -- Up-to-date: /home/gavin/AWC_control/src/install/unitree_lidar_sdk/bin/example_lidar_serial
+[0.242s] Invoked command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/gavin/AWC_control/src/build/unitree_lidar_sdk

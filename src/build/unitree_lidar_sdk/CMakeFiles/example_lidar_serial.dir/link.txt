@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++17  -O3 -Wall -DNDEBUG -rdynamic CMakeFiles/example_lidar_serial.dir/examples/example_lidar_serial.cpp.o -o /home/gavin/AWC_control/src/unitree_lidar_sdk/bin/example_lidar_serial   -L/home/gavin/AWC_control/src/unitree_lidar_sdk/lib/x86_64  -Wl,-rpath,/home/gavin/AWC_control/src/unitree_lidar_sdk/lib/x86_64: -Wl,-Bstatic -lunitree_lidar_sdk -Wl,-Bdynamic 

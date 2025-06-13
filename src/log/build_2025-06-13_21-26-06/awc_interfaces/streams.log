@@ -1,0 +1,155 @@
+[0.674s] Invoking command in '/home/gavin/AWC_control/src/build/awc_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/src/install/tf_publisher:/home/gavin/AWC_control/src/install/ros2arduino:/home/gavin/AWC_control/src/install/robot_joy:/home/gavin/AWC_control/src/install/nav2_commander:/home/gavin/AWC_control/src/install/js2fork:/home/gavin/AWC_control/src/install/joystick_ros2:/home/gavin/AWC_control/src/install/gpt:/home/gavin/AWC_control/src/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/awc_interfaces -- -j8 -l8
+[2.652s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_generator_c[0m
+[2.652s] [  3%] Built target awc_interfaces__cpp
+[2.653s] [ 12%] Built target awc_interfaces__rosidl_generator_c
+[2.653s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_cpp[0m
+[2.653s] [ 12%] Built target ament_cmake_python_copy_awc_interfaces
+[2.653s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_introspection_cpp[0m
+[2.653s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[2.653s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_introspection_c[0m
+[2.653s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_fastrtps_c[0m
+[2.653s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_c[0m
+[2.653s] [ 22%] Built target awc_interfaces__rosidl_typesupport_cpp
+[2.654s] [ 32%] Built target awc_interfaces__rosidl_typesupport_introspection_cpp
+[2.654s] [ 41%] Built target awc_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.654s] [ 51%] Built target awc_interfaces__rosidl_typesupport_introspection_c
+[2.654s] [ 61%] Built target awc_interfaces__rosidl_typesupport_fastrtps_c
+[2.654s] [ 70%] Built target awc_interfaces__rosidl_typesupport_c
+[2.654s] [ 70%] Built target awc_interfaces
+[2.654s] [ 74%] Built target awc_interfaces__py
+[2.654s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_generator_py[0m
+[2.654s] [ 80%] Built target awc_interfaces__rosidl_generator_py
+[2.654s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[2.654s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_c__pyext[0m
+[2.655s] [35m[1mConsolidate compiler generated dependencies of target awc_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.655s] [ 87%] Built target awc_interfaces__rosidl_typesupport_introspection_c__pyext
+[2.655s] [ 93%] Built target awc_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[2.655s] [100%] Built target awc_interfaces__rosidl_typesupport_c__pyext
+[2.655s] running egg_info
+[2.655s] writing awc_interfaces.egg-info/PKG-INFO
+[2.656s] writing dependency_links to awc_interfaces.egg-info/dependency_links.txt
+[2.656s] writing top-level names to awc_interfaces.egg-info/top_level.txt
+[2.656s] reading manifest file 'awc_interfaces.egg-info/SOURCES.txt'
+[2.656s] writing manifest file 'awc_interfaces.egg-info/SOURCES.txt'
+[2.656s] [100%] Built target ament_cmake_python_build_awc_interfaces_egg
+[2.658s] Invoked command in '/home/gavin/AWC_control/src/build/awc_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/src/install/tf_publisher:/home/gavin/AWC_control/src/install/ros2arduino:/home/gavin/AWC_control/src/install/robot_joy:/home/gavin/AWC_control/src/install/nav2_commander:/home/gavin/AWC_control/src/install/js2fork:/home/gavin/AWC_control/src/install/joystick_ros2:/home/gavin/AWC_control/src/install/gpt:/home/gavin/AWC_control/src/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/awc_interfaces -- -j8 -l8
+[2.674s] Invoking command in '/home/gavin/AWC_control/src/build/awc_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/src/install/tf_publisher:/home/gavin/AWC_control/src/install/ros2arduino:/home/gavin/AWC_control/src/install/robot_joy:/home/gavin/AWC_control/src/install/nav2_commander:/home/gavin/AWC_control/src/install/js2fork:/home/gavin/AWC_control/src/install/joystick_ros2:/home/gavin/AWC_control/src/install/gpt:/home/gavin/AWC_control/src/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/gavin/AWC_control/src/build/awc_interfaces
+[3.198s] -- Install configuration: ""
+[3.199s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/ament_index/resource_index/rosidl_interfaces/awc_interfaces
+[3.199s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces
+[3.199s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg
+[3.200s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/navigation_command.h
+[3.200s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail
+[3.201s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__functions.c
+[3.201s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__struct.h
+[3.201s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__type_support.h
+[3.202s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__functions.h
+[3.202s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.204s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/library_path.sh
+[3.204s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/library_path.dsv
+[3.204s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_generator_c.so
+[3.205s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces
+[3.205s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg
+[3.205s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail
+[3.205s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__rosidl_typesupport_fastrtps_c.h
+[3.205s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_typesupport_fastrtps_c.so
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__type_support.hpp
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__struct.hpp
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__traits.hpp
+[3.206s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__builder.hpp
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/navigation_command.hpp
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__rosidl_typesupport_fastrtps_cpp.hpp
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/dds_fastrtps
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[3.207s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__rosidl_typesupport_introspection_c.h
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__type_support.c
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_typesupport_introspection_c.so
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_typesupport_c.so
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__rosidl_typesupport_introspection_cpp.hpp
+[3.208s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/include/awc_interfaces/awc_interfaces/msg/detail/navigation_command__type_support.cpp
+[3.209s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_typesupport_introspection_cpp.so
+[3.209s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_typesupport_cpp.so
+[3.209s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/pythonpath.sh
+[3.209s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/pythonpath.dsv
+[3.209s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces-0.0.0-py3.12.egg-info
+[3.209s] -- Installing: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[3.209s] -- Installing: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[3.209s] -- Installing: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[3.209s] -- Installing: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/awc_interfaces_s__rosidl_typesupport_c.cpython-312-x86_64-linux-gnu.so
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/_awc_interfaces_s.ep.rosidl_typesupport_c.c
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/awc_interfaces_s__rosidl_typesupport_introspection_c.cpython-312-x86_64-linux-gnu.so
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/_awc_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/msg
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/msg/_navigation_command_s.c
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/msg/__init__.py
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/msg/_navigation_command.py
+[3.210s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/awc_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-312-x86_64-linux-gnu.so
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/_awc_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/__init__.py
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/libawc_interfaces__rosidl_generator_py.so
+[3.211s] Listing '/home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces'...
+[3.211s] Listing '/home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/msg'...
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/awc_interfaces_s__rosidl_typesupport_introspection_c.cpython-312-x86_64-linux-gnu.so
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/awc_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-312-x86_64-linux-gnu.so
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.12/site-packages/awc_interfaces/awc_interfaces_s__rosidl_typesupport_c.cpython-312-x86_64-linux-gnu.so
+[3.211s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/lib/libawc_interfaces__rosidl_generator_py.so
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/msg/NavigationCommand.idl
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/msg/NavigationCommand.msg
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/ament_index/resource_index/package_run_dependencies/awc_interfaces
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/ament_index/resource_index/parent_prefix_path/awc_interfaces
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/ament_prefix_path.sh
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/ament_prefix_path.dsv
+[3.212s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/path.sh
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/environment/path.dsv
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/local_setup.bash
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/local_setup.sh
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/local_setup.zsh
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/local_setup.dsv
+[3.213s] -- Installing: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.dsv
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/ament_index/resource_index/packages/awc_interfaces
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_generator_cExport.cmake
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_generator_cExport-noconfig.cmake
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[3.213s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.214s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_generator_cppExport.cmake
+[3.214s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.214s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.214s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[3.214s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_cExport.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_cppExport.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_generator_pyExport.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/export_awc_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/rosidl_cmake-extras.cmake
+[3.215s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfacesConfig.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/cmake/awc_interfacesConfig-version.cmake
+[3.216s] -- Up-to-date: /home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.xml
+[3.237s] Invoked command in '/home/gavin/AWC_control/src/build/awc_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/src/install/tf_publisher:/home/gavin/AWC_control/src/install/ros2arduino:/home/gavin/AWC_control/src/install/robot_joy:/home/gavin/AWC_control/src/install/nav2_commander:/home/gavin/AWC_control/src/install/js2fork:/home/gavin/AWC_control/src/install/joystick_ros2:/home/gavin/AWC_control/src/install/gpt:/home/gavin/AWC_control/src/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/gavin/AWC_control/src/build/awc_interfaces

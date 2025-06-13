@@ -1,0 +1,3 @@
+[console_scripts]
+wheeltec_keyboard.py = robot_joy.wheeltec_keyboard:main
+

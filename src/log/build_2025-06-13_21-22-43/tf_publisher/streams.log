@@ -1,0 +1,36 @@
+[3.816s] Invoking command in '/home/gavin/AWC_control/src/tf_publisher': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/tf_publisher build --build-base /home/gavin/AWC_control/src/build/tf_publisher/build install --record /home/gavin/AWC_control/src/build/tf_publisher/install.log --single-version-externally-managed install_data
+[6.053s] running egg_info
+[6.054s] creating ../build/tf_publisher/tf_publisher.egg-info
+[6.058s] writing ../build/tf_publisher/tf_publisher.egg-info/PKG-INFO
+[6.059s] writing dependency_links to ../build/tf_publisher/tf_publisher.egg-info/dependency_links.txt
+[6.061s] writing entry points to ../build/tf_publisher/tf_publisher.egg-info/entry_points.txt
+[6.064s] writing requirements to ../build/tf_publisher/tf_publisher.egg-info/requires.txt
+[6.064s] writing top-level names to ../build/tf_publisher/tf_publisher.egg-info/top_level.txt
+[6.067s] writing manifest file '../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[6.079s] reading manifest file '../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[6.095s] writing manifest file '../build/tf_publisher/tf_publisher.egg-info/SOURCES.txt'
+[6.095s] running build
+[6.095s] running build_py
+[6.095s] creating /home/gavin/AWC_control/src/build/tf_publisher/build
+[6.096s] creating /home/gavin/AWC_control/src/build/tf_publisher/build/lib
+[6.097s] creating /home/gavin/AWC_control/src/build/tf_publisher/build/lib/tf_publisher
+[6.097s] copying tf_publisher/tf_broadcaster.py -> /home/gavin/AWC_control/src/build/tf_publisher/build/lib/tf_publisher
+[6.098s] copying tf_publisher/__init__.py -> /home/gavin/AWC_control/src/build/tf_publisher/build/lib/tf_publisher
+[6.098s] running install
+[6.107s] running install_lib
+[6.108s] creating /home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[6.110s] copying /home/gavin/AWC_control/src/build/tf_publisher/build/lib/tf_publisher/tf_broadcaster.py -> /home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[6.113s] copying /home/gavin/AWC_control/src/build/tf_publisher/build/lib/tf_publisher/__init__.py -> /home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages/tf_publisher
+[6.120s] byte-compiling /home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/tf_broadcaster.py to tf_broadcaster.cpython-310.pyc
+[6.124s] byte-compiling /home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages/tf_publisher/__init__.py to __init__.cpython-310.pyc
+[6.133s] running install_data
+[6.136s] creating /home/gavin/AWC_control/src/install/tf_publisher/share/ament_index
+[6.136s] creating /home/gavin/AWC_control/src/install/tf_publisher/share/ament_index/resource_index
+[6.136s] creating /home/gavin/AWC_control/src/install/tf_publisher/share/ament_index/resource_index/packages
+[6.137s] copying resource/tf_publisher -> /home/gavin/AWC_control/src/install/tf_publisher/share/ament_index/resource_index/packages
+[6.137s] copying package.xml -> /home/gavin/AWC_control/src/install/tf_publisher/share/tf_publisher
+[6.137s] running install_egg_info
+[6.149s] Copying ../build/tf_publisher/tf_publisher.egg-info to /home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages/tf_publisher-0.0.0-py3.10.egg-info
+[6.153s] running install_scripts
+[6.271s] writing list of installed files to '/home/gavin/AWC_control/src/build/tf_publisher/install.log'
+[6.418s] Invoked command in '/home/gavin/AWC_control/src/tf_publisher' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/tf_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/tf_publisher/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/tf_publisher build --build-base /home/gavin/AWC_control/src/build/tf_publisher/build install --record /home/gavin/AWC_control/src/build/tf_publisher/install.log --single-version-externally-managed install_data

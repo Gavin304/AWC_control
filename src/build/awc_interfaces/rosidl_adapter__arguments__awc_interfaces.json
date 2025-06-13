@@ -1,0 +1,6 @@
+{
+  "package_name": "awc_interfaces",
+  "non_idl_tuples": [
+    "/home/gavin/AWC_control/src/awc_interfaces:msg/NavigationCommand.msg"
+  ]
+}
