@@ -1,0 +1,12 @@
+digraph G {
+"unilidar_imu_initial" -> "unilidar_imu"[label=" Broadcaster: default_authority\nAverage rate: 633.388\nBuffer length: 4.997\nMost recent transform: 1750243416.770535\nOldest transform: 1750243411.773601\n"];
+"tilting_mouont" -> "unilidar_imu_initial"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"unilidar_imu" -> "unilidar_lidar"[label=" Broadcaster: default_authority\nAverage rate: 662.14\nBuffer length: 4.999\nMost recent transform: 1750243416.77254\nOldest transform: 1750243411.773601\n"];
+"map" -> "odom"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "tilting_mount"[label=" Broadcaster: default_authority\nAverage rate: 442.362\nBuffer length: 4.996\nMost recent transform: 1750243416.769444\nOldest transform: 1750243411.773541\n"];
+"odom" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 32.863\nBuffer length: 4.96\nMost recent transform: 1750243416.769433\nOldest transform: 1750243411.809429\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1750243416.8208566"[ shape=plaintext ] ;
+}->"map";
+}
