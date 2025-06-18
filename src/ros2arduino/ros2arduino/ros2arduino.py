@@ -8,8 +8,8 @@ import threading
 class ArduinoBridge(Node):
     def __init__(self):
         super().__init__('arduino_bridge')
-        self.ser = serial.Serial('/dev/ttyACM0', 115200)
-        self.create_subscription(Twist, 'robot/cmd_vel', self.cmd_vel_callback, 10)
+        self.ser = serial.Serial('/dev/ttyUSB0', 115200)
+        self.create_subscription(Twist, '/cmd_vel_joy', self.cmd_vel_callback, 10)
 
         # Start a background thread for reading the serial data from Arduino
         thread = threading.Thread(target=self.read_serial_loop)
@@ -18,13 +18,13 @@ class ArduinoBridge(Node):
 
     def cmd_vel_callback(self, msg):
         vx = msg.linear.x
-        vy = msg.linear.y
+        vy = 0.0  # Always send 0 for vy, matching your Arduino code usage
         omega = msg.angular.z
         # Pack the data into binary format (3 floats)
         data = struct.pack('fff', vx, vy, omega)
         self.ser.write(data)  # Send packed data to Arduino
 
-        self.get_logger().info(f"Sent to Arduino: vx={vx}, vy={vy}, omega={omega}")
+        #self.get_logger().info(f"Sent to Arduino: vx={vx}, vy={vy}, omega={omega}")
 
     def read_serial_loop(self):
         while rclpy.ok():
@@ -33,7 +33,7 @@ class ArduinoBridge(Node):
                 data = self.ser.read(8)
                 if len(data) == 8:
                     left_speed, right_speed = struct.unpack('ff', data)
-                    self.get_logger().info(f"From Arduino: Left Speed={left_speed}, Right Speed={right_speed}")
+                    #self.get_logger().info(f"From Arduino: Left Speed={left_speed}, Right Speed={right_speed}")
             except Exception as e:
                 self.get_logger().error(f"Serial error: {e}")
 

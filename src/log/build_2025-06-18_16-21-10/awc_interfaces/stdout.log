@@ -1,0 +1,90 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.10 (/home/gavin/install/ament_cmake/share/ament_cmake/cmake)
+-- Found Python3: /home/gavin/miniconda3/bin/python3 (found version "3.12.8") found components: Interpreter 
+-- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/home/gavin/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/home/gavin/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/home/gavin/install/ament_cmake_ros/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /home/gavin/miniconda3/bin/python3 (found suitable version "3.12.8", minimum required is "3.6") 
+-- Found python_cmake_module: 0.10.0 (/home/gavin/install/python_cmake_module/share/python_cmake_module/cmake)
+-- Found PythonLibs: /home/gavin/miniconda3/lib/libpython3.12.so (found suitable version "3.12.8", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /home/gavin/miniconda3/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /home/gavin/miniconda3/include/python3.12
+-- Using PYTHON_LIBRARIES: /home/gavin/miniconda3/lib/libpython3.12.so
+-- Found PythonExtra: .so  
+-- Using numpy include directory: /home/gavin/miniconda3/lib/python3.12/site-packages/numpy/_core/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gavin/AWC_control/src/build/awc_interfaces
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[  3%] Built target ament_cmake_python_copy_awc_interfaces
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  9%] [32mBuilding C object CMakeFiles/awc_interfaces__rosidl_generator_c.dir/rosidl_generator_c/awc_interfaces/msg/detail/navigation_command__functions.c.o[0m
+[ 12%] [32m[1mLinking C shared library libawc_interfaces__rosidl_generator_c.so[0m
+running egg_info
+creating awc_interfaces.egg-info
+[ 12%] Built target awc_interfaces__cpp
+writing awc_interfaces.egg-info/PKG-INFO
+writing dependency_links to awc_interfaces.egg-info/dependency_links.txt
+writing top-level names to awc_interfaces.egg-info/top_level.txt
+writing manifest file 'awc_interfaces.egg-info/SOURCES.txt'
+[ 12%] Built target awc_interfaces__rosidl_generator_c
+[ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 19%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 22%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 29%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 32%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+reading manifest file 'awc_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'awc_interfaces.egg-info/SOURCES.txt'
+[ 32%] Built target ament_cmake_python_build_awc_interfaces_egg
+[ 35%] [32mBuilding CXX object CMakeFiles/awc_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/awc_interfaces/msg/navigation_command__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/awc_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/awc_interfaces/msg/navigation_command__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/awc_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/awc_interfaces/msg/detail/navigation_command__type_support.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/awc_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/awc_interfaces/msg/detail/dds_fastrtps/navigation_command__type_support.cpp.o[0m
+[ 48%] [32m[1mLinking CXX shared library libawc_interfaces__rosidl_typesupport_c.so[0m
+[ 51%] [32mBuilding C object CMakeFiles/awc_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/awc_interfaces/msg/detail/navigation_command__type_support.c.o[0m
+[ 51%] Built target awc_interfaces__rosidl_typesupport_c
+[ 54%] [32m[1mLinking C shared library libawc_interfaces__rosidl_typesupport_introspection_c.so[0m
+[ 54%] Built target awc_interfaces__rosidl_typesupport_introspection_c
+[ 58%] [32mBuilding CXX object CMakeFiles/awc_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/awc_interfaces/msg/detail/navigation_command__type_support_c.cpp.o[0m
+[ 61%] [32m[1mLinking CXX shared library libawc_interfaces__rosidl_typesupport_cpp.so[0m
+[ 64%] [32m[1mLinking CXX shared library libawc_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[ 64%] Built target awc_interfaces__rosidl_typesupport_cpp
+[ 64%] Built target awc_interfaces__rosidl_typesupport_introspection_cpp
+[ 67%] [32m[1mLinking CXX shared library libawc_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 70%] [32m[1mLinking CXX shared library libawc_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[ 70%] Built target awc_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 70%] Built target awc_interfaces__rosidl_typesupport_fastrtps_c
+[ 70%] Built target awc_interfaces
+[ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 74%] Built target awc_interfaces__py
+[ 77%] [32mBuilding C object CMakeFiles/awc_interfaces__rosidl_generator_py.dir/rosidl_generator_py/awc_interfaces/msg/_navigation_command_s.c.o[0m
+[ 80%] [32m[1mLinking C shared library rosidl_generator_py/awc_interfaces/libawc_interfaces__rosidl_generator_py.so[0m
+[ 80%] Built target awc_interfaces__rosidl_generator_py
+[ 87%] [32mBuilding C object CMakeFiles/awc_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/awc_interfaces/_awc_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 87%] [32mBuilding C object CMakeFiles/awc_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/awc_interfaces/_awc_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/awc_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/awc_interfaces/_awc_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 93%] [32m[1mLinking C shared library rosidl_generator_py/awc_interfaces/awc_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-312-x86_64-linux-gnu.so[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/awc_interfaces/awc_interfaces_s__rosidl_typesupport_c.cpython-312-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/awc_interfaces/awc_interfaces_s__rosidl_typesupport_introspection_c.cpython-312-x86_64-linux-gnu.so[0m
+[100%] Built target awc_interfaces__rosidl_typesupport_c__pyext
+[100%] Built target awc_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target awc_interfaces__rosidl_typesupport_introspection_c__pyext

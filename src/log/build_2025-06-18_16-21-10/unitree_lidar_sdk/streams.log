@@ -1,0 +1,24 @@
+[0.910s] Invoking command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/gavin/AWC_control/src/unitree_lidar_sdk -DCMAKE_INSTALL_PREFIX=/home/gavin/AWC_control/src/install/unitree_lidar_sdk
+[1.140s] -- The C compiler identification is GNU 11.4.0
+[1.462s] -- The CXX compiler identification is GNU 11.4.0
+[1.514s] -- Detecting C compiler ABI info
+[1.906s] -- Detecting C compiler ABI info - done
+[1.964s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.966s] -- Detecting C compile features
+[1.972s] -- Detecting C compile features - done
+[1.997s] -- Detecting CXX compiler ABI info
+[2.531s] -- Detecting CXX compiler ABI info - done
+[2.592s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.599s] -- Detecting CXX compile features
+[2.599s] -- Detecting CXX compile features - done
+[2.605s] -- Configuring done
+[2.621s] -- Generating done
+[2.628s] -- Build files have been written to: /home/gavin/AWC_control/src/build/unitree_lidar_sdk
+[2.652s] Invoked command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk' returned '0': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/gavin/AWC_control/src/unitree_lidar_sdk -DCMAKE_INSTALL_PREFIX=/home/gavin/AWC_control/src/install/unitree_lidar_sdk
+[2.653s] Invoking command in '/home/gavin/AWC_control/src/build/unitree_lidar_sdk': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/unitree_lidar_sdk -- -j8 -l8
+[3.078s] [ 25%] [32mBuilding CXX object CMakeFiles/example_lidar_udp.dir/examples/example_lidar_udp.cpp.o[0m
+[3.107s] [ 50%] [32mBuilding CXX object CMakeFiles/example_lidar_serial.dir/examples/example_lidar_serial.cpp.o[0m
+[5.112s] [ 75%] [32m[1mLinking CXX executable /home/gavin/AWC_control/src/unitree_lidar_sdk/bin/example_lidar_serial[0m
+[5.160s] [100%] [32m[1mLinking CXX executable /home/gavin/AWC_control/src/unitree_lidar_sdk/bin/example_lidar_udp[0m
+[5.398s] [100%] Built target example_lidar_serial
+[5.494s] [100%] Built target example_lidar_udp

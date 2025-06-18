@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-fac8f973be857be4a144.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "unitree_lidar_sdk",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "example_lidar_serial::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example_lidar_serial-Release-b899420f383304cf28f4.json",
+					"name" : "example_lidar_serial",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "example_lidar_udp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example_lidar_udp-Release-f220dac8bdb7b57055c8.json",
+					"name" : "example_lidar_udp",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gavin/AWC_control/src/build/unitree_lidar_sdk",
+		"source" : "/home/gavin/AWC_control/src/unitree_lidar_sdk"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/js2fork/js2fork.egg-info/PKG-INFO
+../build/js2fork/js2fork.egg-info/SOURCES.txt
+../build/js2fork/js2fork.egg-info/dependency_links.txt
+../build/js2fork/js2fork.egg-info/entry_points.txt
+../build/js2fork/js2fork.egg-info/requires.txt
+../build/js2fork/js2fork.egg-info/top_level.txt
+../build/js2fork/js2fork.egg-info/zip-safe
+js2fork/__init__.py
+js2fork/js2fork.py
+resource/js2fork
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

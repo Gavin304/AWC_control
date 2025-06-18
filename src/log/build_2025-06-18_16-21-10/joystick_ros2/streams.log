@@ -1,0 +1,44 @@
+[4.530s] Invoking command in '/home/gavin/AWC_control/src/joystick_ros2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/joystick_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joystick_ros2 build --build-base /home/gavin/AWC_control/src/build/joystick_ros2/build install --record /home/gavin/AWC_control/src/build/joystick_ros2/install.log --single-version-externally-managed install_data
+[5.437s] running egg_info
+[5.437s] creating ../build/joystick_ros2/joystick_ros2.egg-info
+[5.437s] writing ../build/joystick_ros2/joystick_ros2.egg-info/PKG-INFO
+[5.438s] writing dependency_links to ../build/joystick_ros2/joystick_ros2.egg-info/dependency_links.txt
+[5.438s] writing entry points to ../build/joystick_ros2/joystick_ros2.egg-info/entry_points.txt
+[5.438s] writing requirements to ../build/joystick_ros2/joystick_ros2.egg-info/requires.txt
+[5.438s] writing top-level names to ../build/joystick_ros2/joystick_ros2.egg-info/top_level.txt
+[5.438s] writing manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[5.438s] reading manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[5.439s] adding license file 'LICENSE'
+[5.439s] writing manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[5.439s] running build
+[5.439s] running build_py
+[5.439s] creating /home/gavin/AWC_control/src/build/joystick_ros2/build
+[5.439s] creating /home/gavin/AWC_control/src/build/joystick_ros2/build/lib
+[5.439s] creating /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2
+[5.440s] copying ./input_example.py -> /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2
+[5.440s] copying ./inputs.py -> /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2
+[5.440s] copying ./joystick_ros2.py -> /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2
+[5.440s] copying ./__init__.py -> /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2
+[5.440s] running install
+[5.440s] running install_lib
+[5.440s] creating /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2
+[5.440s] copying /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2/input_example.py -> /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2
+[5.441s] copying /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2/inputs.py -> /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2
+[5.441s] copying /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2/joystick_ros2.py -> /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2
+[5.441s] copying /home/gavin/AWC_control/src/build/joystick_ros2/build/lib/joystick_ros2/__init__.py -> /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2
+[5.441s] byte-compiling /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2/input_example.py to input_example.cpython-310.pyc
+[5.441s] byte-compiling /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2/inputs.py to inputs.cpython-310.pyc
+[5.442s] byte-compiling /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2/joystick_ros2.py to joystick_ros2.cpython-310.pyc
+[5.442s] byte-compiling /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2/__init__.py to __init__.cpython-310.pyc
+[5.442s] running install_data
+[5.442s] creating /home/gavin/AWC_control/src/install/joystick_ros2/share/ament_index
+[5.442s] creating /home/gavin/AWC_control/src/install/joystick_ros2/share/ament_index/resource_index
+[5.442s] creating /home/gavin/AWC_control/src/install/joystick_ros2/share/ament_index/resource_index/packages
+[5.443s] copying resource/joystick_ros2 -> /home/gavin/AWC_control/src/install/joystick_ros2/share/ament_index/resource_index/packages
+[5.443s] copying package.xml -> /home/gavin/AWC_control/src/install/joystick_ros2/share/joystick_ros2
+[5.443s] running install_egg_info
+[5.443s] Copying ../build/joystick_ros2/joystick_ros2.egg-info to /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2-0.0.1-py3.10.egg-info
+[5.443s] running install_scripts
+[5.452s] Installing joystick_ros2 script to /home/gavin/AWC_control/src/install/joystick_ros2/lib/joystick_ros2
+[5.452s] writing list of installed files to '/home/gavin/AWC_control/src/build/joystick_ros2/install.log'
+[6.243s] Invoked command in '/home/gavin/AWC_control/src/joystick_ros2' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/joystick_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joystick_ros2 build --build-base /home/gavin/AWC_control/src/build/joystick_ros2/build install --record /home/gavin/AWC_control/src/build/joystick_ros2/install.log --single-version-externally-managed install_data

@@ -1,0 +1,46 @@
+[4.380s] Invoking command in '/home/gavin/AWC_control/src/gpt': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/gpt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gpt build --build-base /home/gavin/AWC_control/src/build/gpt/build install --record /home/gavin/AWC_control/src/build/gpt/install.log --single-version-externally-managed install_data
+[5.178s] running egg_info
+[5.180s] creating ../build/gpt/gpt.egg-info
+[5.180s] writing ../build/gpt/gpt.egg-info/PKG-INFO
+[5.182s] writing dependency_links to ../build/gpt/gpt.egg-info/dependency_links.txt
+[5.184s] writing entry points to ../build/gpt/gpt.egg-info/entry_points.txt
+[5.184s] writing requirements to ../build/gpt/gpt.egg-info/requires.txt
+[5.184s] writing top-level names to ../build/gpt/gpt.egg-info/top_level.txt
+[5.185s] writing manifest file '../build/gpt/gpt.egg-info/SOURCES.txt'
+[5.193s] reading manifest file '../build/gpt/gpt.egg-info/SOURCES.txt'
+[5.193s] writing manifest file '../build/gpt/gpt.egg-info/SOURCES.txt'
+[5.195s] running build
+[5.195s] running build_py
+[5.195s] creating /home/gavin/AWC_control/src/build/gpt/build
+[5.196s] creating /home/gavin/AWC_control/src/build/gpt/build/lib
+[5.196s] creating /home/gavin/AWC_control/src/build/gpt/build/lib/gpt
+[5.196s] copying gpt/audio.py -> /home/gavin/AWC_control/src/build/gpt/build/lib/gpt
+[5.196s] copying gpt/__init__.py -> /home/gavin/AWC_control/src/build/gpt/build/lib/gpt
+[5.196s] copying gpt/gpt.py -> /home/gavin/AWC_control/src/build/gpt/build/lib/gpt
+[5.197s] copying gpt/prompt.txt -> /home/gavin/AWC_control/src/build/gpt/build/lib/gpt
+[5.198s] running install
+[5.199s] running install_lib
+[5.205s] creating /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt
+[5.205s] copying /home/gavin/AWC_control/src/build/gpt/build/lib/gpt/prompt.txt -> /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt
+[5.206s] copying /home/gavin/AWC_control/src/build/gpt/build/lib/gpt/audio.py -> /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt
+[5.206s] copying /home/gavin/AWC_control/src/build/gpt/build/lib/gpt/__init__.py -> /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt
+[5.206s] copying /home/gavin/AWC_control/src/build/gpt/build/lib/gpt/gpt.py -> /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt
+[5.212s] byte-compiling /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt/audio.py to audio.cpython-310.pyc
+[5.213s] byte-compiling /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt/__init__.py to __init__.cpython-310.pyc
+[5.213s] byte-compiling /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt/gpt.py to gpt.cpython-310.pyc
+[5.215s] running install_data
+[5.217s] creating /home/gavin/AWC_control/src/install/gpt/share/ament_index
+[5.217s] creating /home/gavin/AWC_control/src/install/gpt/share/ament_index/resource_index
+[5.217s] creating /home/gavin/AWC_control/src/install/gpt/share/ament_index/resource_index/packages
+[5.218s] copying resource/gpt -> /home/gavin/AWC_control/src/install/gpt/share/ament_index/resource_index/packages
+[5.218s] copying package.xml -> /home/gavin/AWC_control/src/install/gpt/share/gpt
+[5.218s] creating /home/gavin/AWC_control/src/install/gpt/share/gpt/audio_files
+[5.218s] copying audio_files/init.wav -> /home/gavin/AWC_control/src/install/gpt/share/gpt/audio_files
+[5.218s] copying audio_files/conf.wav -> /home/gavin/AWC_control/src/install/gpt/share/gpt/audio_files
+[5.219s] running install_egg_info
+[5.223s] Copying ../build/gpt/gpt.egg-info to /home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages/gpt-0.0.0-py3.10.egg-info
+[5.228s] running install_scripts
+[5.281s] Installing audio script to /home/gavin/AWC_control/src/install/gpt/lib/gpt
+[5.281s] Installing gpt_node script to /home/gavin/AWC_control/src/install/gpt/lib/gpt
+[5.281s] writing list of installed files to '/home/gavin/AWC_control/src/build/gpt/install.log'
+[5.350s] Invoked command in '/home/gavin/AWC_control/src/gpt' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/gpt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gpt build --build-base /home/gavin/AWC_control/src/build/gpt/build install --record /home/gavin/AWC_control/src/build/gpt/install.log --single-version-externally-managed install_data

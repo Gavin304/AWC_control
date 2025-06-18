@@ -1,0 +1,470 @@
+[0.280s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.280s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7cac62eb9060>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7cac62eb89d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7cac62eb89d0>>, mixin_verb=('build',))
+[0.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.685s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.685s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gavin/AWC_control/src'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.686s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.723s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extension 'ignore'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extension 'ignore_ament_install'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extensions ['colcon_pkg']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extension 'colcon_pkg'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extensions ['colcon_meta']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extension 'colcon_meta'
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extensions ['ros']
+[0.724s] Level 1:colcon.colcon_core.package_identification:_identify(awc_bringup) by extension 'ros'
+[0.728s] DEBUG:colcon.colcon_core.package_identification:Package 'awc_bringup' with type 'ros.ament_python' and name 'awc_bringup'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extension 'ignore'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extension 'ignore_ament_install'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extensions ['colcon_pkg']
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extension 'colcon_pkg'
+[0.728s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extensions ['colcon_meta']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extension 'colcon_meta'
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extensions ['ros']
+[0.729s] Level 1:colcon.colcon_core.package_identification:_identify(awc_interfaces) by extension 'ros'
+[0.730s] DEBUG:colcon.colcon_core.package_identification:Package 'awc_interfaces' with type 'ros.ament_cmake' and name 'awc_interfaces'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.730s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extensions ['ignore', 'ignore_ament_install']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extension 'ignore'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extension 'ignore_ament_install'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extensions ['colcon_pkg']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extension 'colcon_pkg'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extensions ['colcon_meta']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extension 'colcon_meta'
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extensions ['ros']
+[0.731s] Level 1:colcon.colcon_core.package_identification:_identify(gpt) by extension 'ros'
+[0.732s] DEBUG:colcon.colcon_core.package_identification:Package 'gpt' with type 'ros.ament_python' and name 'gpt'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extension 'ignore'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extension 'ignore_ament_install'
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extensions ['colcon_pkg']
+[0.733s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extension 'colcon_pkg'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extensions ['colcon_meta']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extension 'colcon_meta'
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extensions ['ros']
+[0.734s] Level 1:colcon.colcon_core.package_identification:_identify(joystick_ros2) by extension 'ros'
+[0.735s] DEBUG:colcon.colcon_core.package_identification:Package 'joystick_ros2' with type 'ros.ament_python' and name 'joystick_ros2'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extensions ['ignore', 'ignore_ament_install']
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extension 'ignore'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extension 'ignore_ament_install'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extensions ['colcon_pkg']
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extension 'colcon_pkg'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extensions ['colcon_meta']
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extension 'colcon_meta'
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extensions ['ros']
+[0.735s] Level 1:colcon.colcon_core.package_identification:_identify(js2fork) by extension 'ros'
+[0.736s] DEBUG:colcon.colcon_core.package_identification:Package 'js2fork' with type 'ros.ament_python' and name 'js2fork'
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.736s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extensions ['ignore', 'ignore_ament_install']
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extension 'ignore'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extension 'ignore_ament_install'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extensions ['colcon_pkg']
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extension 'colcon_pkg'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extensions ['colcon_meta']
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extension 'colcon_meta'
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extensions ['ros']
+[0.737s] Level 1:colcon.colcon_core.package_identification:_identify(nav2_commander) by extension 'ros'
+[0.738s] DEBUG:colcon.colcon_core.package_identification:Package 'nav2_commander' with type 'ros.ament_python' and name 'nav2_commander'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extensions ['ignore', 'ignore_ament_install']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extension 'ignore'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extension 'ignore_ament_install'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extensions ['colcon_pkg']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extension 'colcon_pkg'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extensions ['colcon_meta']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extension 'colcon_meta'
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extensions ['ros']
+[0.739s] Level 1:colcon.colcon_core.package_identification:_identify(pointcloud_to_laserscan) by extension 'ros'
+[0.742s] DEBUG:colcon.colcon_core.package_identification:Package 'pointcloud_to_laserscan' with type 'ros.ament_cmake' and name 'pointcloud_to_laserscan'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extensions ['ignore', 'ignore_ament_install']
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extension 'ignore'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extension 'ignore_ament_install'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extensions ['colcon_pkg']
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extension 'colcon_pkg'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extensions ['colcon_meta']
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extension 'colcon_meta'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extensions ['ros']
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(robot_joy) by extension 'ros'
+[0.744s] DEBUG:colcon.colcon_core.package_identification:Package 'robot_joy' with type 'ros.ament_python' and name 'robot_joy'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extensions ['ignore', 'ignore_ament_install']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extension 'ignore'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extension 'ignore_ament_install'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extensions ['colcon_pkg']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extension 'colcon_pkg'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extensions ['colcon_meta']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extension 'colcon_meta'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extensions ['ros']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(ros2arduino) by extension 'ros'
+[0.745s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2arduino' with type 'ros.ament_python' and name 'ros2arduino'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extension 'ignore'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extension 'ignore_ament_install'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extensions ['colcon_pkg']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extension 'colcon_pkg'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extensions ['colcon_meta']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extension 'colcon_meta'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extensions ['ros']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(tf_publisher) by extension 'ros'
+[0.747s] DEBUG:colcon.colcon_core.package_identification:Package 'tf_publisher' with type 'ros.ament_python' and name 'tf_publisher'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extension 'ignore'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extension 'ignore_ament_install'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extensions ['colcon_pkg']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extension 'colcon_pkg'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extensions ['colcon_meta']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extension 'colcon_meta'
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extensions ['ros']
+[0.748s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_ros2) by extension 'ros'
+[0.751s] DEBUG:colcon.colcon_core.package_identification:Package 'unitree_lidar_ros2' with type 'ros.ament_cmake' and name 'unitree_lidar_ros2'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'ignore_ament_install'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extensions ['colcon_pkg']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'colcon_pkg'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extensions ['colcon_meta']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'colcon_meta'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extensions ['ros']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'ros'
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extensions ['cmake', 'python']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'cmake'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(unitree_lidar_sdk) by extension 'python'
+[0.754s] DEBUG:colcon.colcon_core.package_identification:Package 'unitree_lidar_sdk' with type 'cmake' and name 'unitree_lidar_sdk'
+[0.754s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.754s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.755s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.755s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.755s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.800s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.800s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.801s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/gavin/AWC_control/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/unitree_lidar_ros2' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/tf_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/ros2arduino' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/robot_joy' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/pointcloud_to_laserscan' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/nav2_commander' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/js2fork' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/joystick_ros2' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/gpt' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/awc_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.802s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/gavin/AWC_control/install/awc_bringup' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.809s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/gavin/AWC_control/install/unitree_lidar_ros2' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.809s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/gavin/AWC_control/install/pointcloud_to_laserscan' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.809s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/gavin/AWC_control/install/awc_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.811s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/gavin/minimec/install
+[0.812s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/gavin/minimec/src/install
+[0.818s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 132 installed packages in /home/gavin/install
+[0.822s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 424 installed packages in /opt/ros/humble
+[0.830s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'cmake_args' from command line to 'None'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'cmake_target' from command line to 'None'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.936s] Level 5:colcon.colcon_core.verb:set package 'awc_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.936s] DEBUG:colcon.colcon_core.verb:Building package 'awc_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/awc_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/awc_bringup', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/awc_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.937s] Level 5:colcon.colcon_core.verb:set package 'awc_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.937s] DEBUG:colcon.colcon_core.verb:Building package 'awc_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/awc_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/awc_interfaces', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/awc_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'cmake_args' from command line to 'None'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'cmake_target' from command line to 'None'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'cmake_clean_cache' from command line to 'False'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'cmake_clean_first' from command line to 'False'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'cmake_force_configure' from command line to 'False'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'ament_cmake_args' from command line to 'None'
+[0.938s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'catkin_cmake_args' from command line to 'None'
+[0.939s] Level 5:colcon.colcon_core.verb:set package 'gpt' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.939s] DEBUG:colcon.colcon_core.verb:Building package 'gpt' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/gpt', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/gpt', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/gpt', 'symlink_install': False, 'test_result_base': None}
+[0.939s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_args' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_target' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.940s] Level 5:colcon.colcon_core.verb:set package 'joystick_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.940s] DEBUG:colcon.colcon_core.verb:Building package 'joystick_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/joystick_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/joystick_ros2', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/joystick_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'cmake_args' from command line to 'None'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'cmake_target' from command line to 'None'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'cmake_clean_cache' from command line to 'False'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'cmake_clean_first' from command line to 'False'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'cmake_force_configure' from command line to 'False'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'ament_cmake_args' from command line to 'None'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'catkin_cmake_args' from command line to 'None'
+[0.941s] Level 5:colcon.colcon_core.verb:set package 'js2fork' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.941s] DEBUG:colcon.colcon_core.verb:Building package 'js2fork' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/js2fork', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/js2fork', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/js2fork', 'symlink_install': False, 'test_result_base': None}
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'cmake_args' from command line to 'None'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'cmake_target' from command line to 'None'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'cmake_clean_cache' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'cmake_clean_first' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'cmake_force_configure' from command line to 'False'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'ament_cmake_args' from command line to 'None'
+[0.942s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'catkin_cmake_args' from command line to 'None'
+[0.943s] Level 5:colcon.colcon_core.verb:set package 'nav2_commander' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.943s] DEBUG:colcon.colcon_core.verb:Building package 'nav2_commander' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/nav2_commander', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/nav2_commander', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/nav2_commander', 'symlink_install': False, 'test_result_base': None}
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_args' from command line to 'None'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target' from command line to 'None'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_cache' from command line to 'False'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_clean_first' from command line to 'False'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'cmake_force_configure' from command line to 'False'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'ament_cmake_args' from command line to 'None'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_cmake_args' from command line to 'None'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'pointcloud_to_laserscan' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.944s] DEBUG:colcon.colcon_core.verb:Building package 'pointcloud_to_laserscan' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/pointcloud_to_laserscan', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/pointcloud_to_laserscan', 'symlink_install': False, 'test_result_base': None}
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'cmake_args' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'cmake_target' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'cmake_clean_cache' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'cmake_clean_first' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'cmake_force_configure' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'ament_cmake_args' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'catkin_cmake_args' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'robot_joy' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.945s] DEBUG:colcon.colcon_core.verb:Building package 'robot_joy' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/robot_joy', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/robot_joy', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/robot_joy', 'symlink_install': False, 'test_result_base': None}
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'cmake_args' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'cmake_target' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'cmake_clean_cache' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'cmake_clean_first' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'cmake_force_configure' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'ament_cmake_args' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'catkin_cmake_args' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'ros2arduino' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.946s] DEBUG:colcon.colcon_core.verb:Building package 'ros2arduino' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/ros2arduino', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/ros2arduino', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/ros2arduino', 'symlink_install': False, 'test_result_base': None}
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'cmake_args' from command line to 'None'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'cmake_target' from command line to 'None'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.947s] Level 5:colcon.colcon_core.verb:set package 'tf_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.947s] DEBUG:colcon.colcon_core.verb:Building package 'tf_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/tf_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/tf_publisher', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/tf_publisher', 'symlink_install': False, 'test_result_base': None}
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'cmake_args' from command line to 'None'
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'cmake_target' from command line to 'None'
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'cmake_clean_first' from command line to 'False'
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'cmake_force_configure' from command line to 'False'
+[0.948s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'ament_cmake_args' from command line to 'None'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_ros2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.949s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_lidar_ros2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/unitree_lidar_ros2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/unitree_lidar_ros2', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/unitree_lidar_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.949s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'cmake_args' from command line to 'None'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'cmake_target' from command line to 'None'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.950s] Level 5:colcon.colcon_core.verb:set package 'unitree_lidar_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.950s] DEBUG:colcon.colcon_core.verb:Building package 'unitree_lidar_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gavin/AWC_control/src/build/unitree_lidar_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gavin/AWC_control/src/install/unitree_lidar_sdk', 'merge_install': False, 'path': '/home/gavin/AWC_control/src/unitree_lidar_sdk', 'symlink_install': False, 'test_result_base': None}
+[0.950s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.952s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.954s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/awc_bringup' with build type 'ament_python'
+[0.954s] Level 1:colcon.colcon_core.shell:create_environment_hook('awc_bringup', 'ament_prefix_path')
+[0.961s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_bringup/share/awc_bringup/hook/ament_prefix_path.ps1'
+[0.963s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/awc_bringup/share/awc_bringup/hook/ament_prefix_path.dsv'
+[0.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_bringup/share/awc_bringup/hook/ament_prefix_path.sh'
+[0.967s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.967s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.993s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gavin/AWC_control/src/awc_interfaces' with build type 'ament_cmake'
+[0.994s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gavin/AWC_control/src/awc_interfaces'
+[0.994s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.994s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.020s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/gpt' with build type 'ament_python'
+[1.021s] Level 1:colcon.colcon_core.shell:create_environment_hook('gpt', 'ament_prefix_path')
+[1.021s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/gpt/share/gpt/hook/ament_prefix_path.ps1'
+[1.023s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/gpt/share/gpt/hook/ament_prefix_path.dsv'
+[1.024s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/gpt/share/gpt/hook/ament_prefix_path.sh'
+[1.025s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.025s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.051s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/joystick_ros2' with build type 'ament_python'
+[1.051s] Level 1:colcon.colcon_core.shell:create_environment_hook('joystick_ros2', 'ament_prefix_path')
+[1.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/joystick_ros2/share/joystick_ros2/hook/ament_prefix_path.ps1'
+[1.054s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/joystick_ros2/share/joystick_ros2/hook/ament_prefix_path.dsv'
+[1.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/joystick_ros2/share/joystick_ros2/hook/ament_prefix_path.sh'
+[1.057s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.057s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.082s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/js2fork' with build type 'ament_python'
+[1.082s] Level 1:colcon.colcon_core.shell:create_environment_hook('js2fork', 'ament_prefix_path')
+[1.083s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/js2fork/share/js2fork/hook/ament_prefix_path.ps1'
+[1.084s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/js2fork/share/js2fork/hook/ament_prefix_path.dsv'
+[1.085s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/js2fork/share/js2fork/hook/ament_prefix_path.sh'
+[1.086s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.087s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.109s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/nav2_commander' with build type 'ament_python'
+[1.109s] Level 1:colcon.colcon_core.shell:create_environment_hook('nav2_commander', 'ament_prefix_path')
+[1.110s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/nav2_commander/share/nav2_commander/hook/ament_prefix_path.ps1'
+[1.111s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/nav2_commander/share/nav2_commander/hook/ament_prefix_path.dsv'
+[1.111s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/nav2_commander/share/nav2_commander/hook/ament_prefix_path.sh'
+[1.113s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.113s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.136s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gavin/AWC_control/src/pointcloud_to_laserscan' with build type 'ament_cmake'
+[1.136s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gavin/AWC_control/src/pointcloud_to_laserscan'
+[1.137s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.137s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.162s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/robot_joy' with build type 'ament_python'
+[1.163s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_joy', 'ament_prefix_path')
+[1.163s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/robot_joy/share/robot_joy/hook/ament_prefix_path.ps1'
+[1.165s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/robot_joy/share/robot_joy/hook/ament_prefix_path.dsv'
+[1.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/robot_joy/share/robot_joy/hook/ament_prefix_path.sh'
+[1.167s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.168s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.855s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/awc_bringup'
+[1.856s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.856s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.892s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/build/awc_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/install/tf_publisher:/home/gavin/AWC_control/install/ros2arduino:/home/gavin/AWC_control/install/robot_joy:/home/gavin/AWC_control/install/nav2_commander:/home/gavin/AWC_control/install/js2fork:/home/gavin/AWC_control/install/joystick_ros2:/home/gavin/AWC_control/install/gpt:/home/gavin/AWC_control/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/awc_interfaces -- -j8 -l8
+[2.832s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/gpt'
+[2.833s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.833s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.514s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/joystick_ros2'
+[3.514s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.514s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.135s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/js2fork'
+[4.135s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.136s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.845s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/nav2_commander'
+[4.845s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.845s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.874s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/build/pointcloud_to_laserscan': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/install/tf_publisher:/home/gavin/AWC_control/install/ros2arduino:/home/gavin/AWC_control/install/robot_joy:/home/gavin/AWC_control/install/nav2_commander:/home/gavin/AWC_control/install/js2fork:/home/gavin/AWC_control/install/joystick_ros2:/home/gavin/AWC_control/install/gpt:/home/gavin/AWC_control/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/gavin/AWC_control/src/pointcloud_to_laserscan -DCMAKE_INSTALL_PREFIX=/home/gavin/AWC_control/src/install/pointcloud_to_laserscan
+[4.887s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gavin/AWC_control/src/build/awc_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/install/tf_publisher:/home/gavin/AWC_control/install/ros2arduino:/home/gavin/AWC_control/install/robot_joy:/home/gavin/AWC_control/install/nav2_commander:/home/gavin/AWC_control/install/js2fork:/home/gavin/AWC_control/install/joystick_ros2:/home/gavin/AWC_control/install/gpt:/home/gavin/AWC_control/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/gavin/AWC_control/src/build/awc_interfaces -- -j8 -l8
+[4.909s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/build/awc_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/install/tf_publisher:/home/gavin/AWC_control/install/ros2arduino:/home/gavin/AWC_control/install/robot_joy:/home/gavin/AWC_control/install/nav2_commander:/home/gavin/AWC_control/install/js2fork:/home/gavin/AWC_control/install/joystick_ros2:/home/gavin/AWC_control/install/gpt:/home/gavin/AWC_control/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/gavin/AWC_control/src/build/awc_interfaces
+[5.598s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/robot_joy'
+[5.599s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.599s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.750s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(awc_interfaces)
+[5.755s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gavin/AWC_control/src/build/awc_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/install/tf_publisher:/home/gavin/AWC_control/install/ros2arduino:/home/gavin/AWC_control/install/robot_joy:/home/gavin/AWC_control/install/nav2_commander:/home/gavin/AWC_control/install/js2fork:/home/gavin/AWC_control/install/joystick_ros2:/home/gavin/AWC_control/install/gpt:/home/gavin/AWC_control/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/gavin/AWC_control/src/build/awc_interfaces
+[5.771s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces' for CMake module files
+[5.773s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces' for CMake config files
+[5.775s] Level 1:colcon.colcon_core.shell:create_environment_hook('awc_interfaces', 'cmake_prefix_path')
+[5.775s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/cmake_prefix_path.ps1'
+[5.782s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/cmake_prefix_path.dsv'
+[5.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/cmake_prefix_path.sh'
+[5.786s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/lib'
+[5.786s] Level 1:colcon.colcon_core.shell:create_environment_hook('awc_interfaces', 'ld_library_path_lib')
+[5.787s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/ld_library_path_lib.ps1'
+[5.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/ld_library_path_lib.dsv'
+[5.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/ld_library_path_lib.sh'
+[5.801s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/bin'
+[5.801s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/lib/pkgconfig/awc_interfaces.pc'
+[5.802s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.10/site-packages'
+[5.806s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/bin'
+[5.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.ps1'
+[5.810s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.dsv'
+[5.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.sh'
+[5.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.bash'
+[5.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.zsh'
+[5.817s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gavin/AWC_control/src/install/awc_interfaces/share/colcon-core/packages/awc_interfaces)
+[5.819s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(awc_interfaces)
+[5.820s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces' for CMake module files
+[5.822s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces' for CMake config files
+[5.823s] Level 1:colcon.colcon_core.shell:create_environment_hook('awc_interfaces', 'cmake_prefix_path')
+[5.824s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/cmake_prefix_path.ps1'
+[5.826s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/cmake_prefix_path.dsv'
+[5.827s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/cmake_prefix_path.sh'
+[5.828s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/lib'
+[5.829s] Level 1:colcon.colcon_core.shell:create_environment_hook('awc_interfaces', 'ld_library_path_lib')
+[5.831s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/ld_library_path_lib.ps1'
+[5.833s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/ld_library_path_lib.dsv'
+[5.834s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/hook/ld_library_path_lib.sh'
+[5.835s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/bin'
+[5.836s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/lib/pkgconfig/awc_interfaces.pc'
+[5.837s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/lib/python3.10/site-packages'
+[5.837s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/awc_interfaces/bin'
+[5.839s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.ps1'
+[5.840s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.dsv'
+[5.842s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.sh'
+[5.843s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.bash'
+[5.845s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/awc_interfaces/share/awc_interfaces/package.zsh'
+[5.846s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gavin/AWC_control/src/install/awc_interfaces/share/colcon-core/packages/awc_interfaces)
+[5.850s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gavin/AWC_control/src/ros2arduino' with build type 'ament_python'
+[5.850s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2arduino', 'ament_prefix_path')
+[5.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/ros2arduino/share/ros2arduino/hook/ament_prefix_path.ps1'
+[5.856s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gavin/AWC_control/src/install/ros2arduino/share/ros2arduino/hook/ament_prefix_path.dsv'
+[5.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gavin/AWC_control/src/install/ros2arduino/share/ros2arduino/hook/ament_prefix_path.sh'
+[5.866s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.869s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.676s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gavin/AWC_control/src/ros2arduino'
+[7.676s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.677s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.746s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/robot_joy': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/robot_joy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/robot_joy build --build-base /home/gavin/AWC_control/src/build/robot_joy/build install --record /home/gavin/AWC_control/src/build/robot_joy/install.log --single-version-externally-managed install_data
+[7.760s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/joystick_ros2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/joystick_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joystick_ros2 build --build-base /home/gavin/AWC_control/src/build/joystick_ros2/build install --record /home/gavin/AWC_control/src/build/joystick_ros2/install.log --single-version-externally-managed install_data
+[7.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/awc_bringup': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/awc_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/awc_bringup/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/awc_bringup build --build-base /home/gavin/AWC_control/src/build/awc_bringup/build install --record /home/gavin/AWC_control/src/build/awc_bringup/install.log --single-version-externally-managed install_data
+[7.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/js2fork': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/js2fork/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/js2fork build --build-base /home/gavin/AWC_control/src/build/js2fork/build install --record /home/gavin/AWC_control/src/build/js2fork/install.log --single-version-externally-managed install_data
+[7.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gavin/AWC_control/src/build/pointcloud_to_laserscan' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gavin/AWC_control/install/tf_publisher:/home/gavin/AWC_control/install/ros2arduino:/home/gavin/AWC_control/install/robot_joy:/home/gavin/AWC_control/install/nav2_commander:/home/gavin/AWC_control/install/js2fork:/home/gavin/AWC_control/install/joystick_ros2:/home/gavin/AWC_control/install/gpt:/home/gavin/AWC_control/install/awc_bringup:/home/gavin/minimec/install/wheeltec_control:/home/gavin/minimec/install/mini_mec_localization:/home/gavin/minimec/src/install/wheeltec_control:/home/gavin/minimec/src/install/mini_mec_localization:/home/gavin/install/ament_uncrustify:/home/gavin/install/tracetools_trace:/home/gavin/install/tracetools_read:/home/gavin/install/rpyutils:/home/gavin/install/rosidl_cli:/home/gavin/install/launch_pytest:/home/gavin/install/launch_testing:/home/gavin/install/launch_yaml:/home/gavin/install/launch_xml:/home/gavin/install/launch:/home/gavin/install/osrf_pycommon:/home/gavin/install/domain_coordinator:/home/gavin/install/ament_xmllint:/home/gavin/install/ament_pyflakes:/home/gavin/install/ament_pycodestyle:/home/gavin/install/ament_pep257:/home/gavin/install/ament_pclint:/home/gavin/install/ament_package:/home/gavin/install/ament_mypy:/home/gavin/install/ament_lint_cmake:/home/gavin/install/ament_flake8:/home/gavin/install/ament_copyright:/home/gavin/install/ament_lint:/home/gavin/install/ament_index_python:/home/gavin/install/ament_cpplint:/home/gavin/install/ament_cppcheck:/home/gavin/install/ament_clang_tidy:/home/gavin/install/ament_clang_format:/opt/ros/humble CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/gavin/AWC_control/src/pointcloud_to_laserscan -DCMAKE_INSTALL_PREFIX=/home/gavin/AWC_control/src/install/pointcloud_to_laserscan
+[7.828s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/gpt': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/gpt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/gpt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gpt build --build-base /home/gavin/AWC_control/src/build/gpt/build install --record /home/gavin/AWC_control/src/build/gpt/install.log --single-version-externally-managed install_data
+[7.841s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pointcloud_to_laserscan)
+[7.844s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan' for CMake module files
+[7.847s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan' for CMake config files
+[7.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gavin/AWC_control/src/nav2_commander': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/nav2_commander/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/nav2_commander/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nav2_commander build --build-base /home/gavin/AWC_control/src/build/nav2_commander/build install --record /home/gavin/AWC_control/src/build/nav2_commander/install.log --single-version-externally-managed install_data
+[7.849s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/bin'
+[7.850s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/lib/pkgconfig/pointcloud_to_laserscan.pc'
+[7.851s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/lib/python3.10/site-packages'
+[7.852s] Level 1:colcon.colcon_core.environment:checking '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/bin'
+[7.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.ps1'
+[7.854s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.dsv'
+[7.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.sh'
+[7.856s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.bash'
+[7.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/share/pointcloud_to_laserscan/package.zsh'
+[7.858s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gavin/AWC_control/src/install/pointcloud_to_laserscan/share/colcon-core/packages/pointcloud_to_laserscan)
+[9.462s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.462s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.462s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[9.463s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.475s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.475s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.475s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.494s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.495s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gavin/AWC_control/src/install/local_setup.ps1'
+[9.497s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gavin/AWC_control/src/install/_local_setup_util_ps1.py'
+[9.499s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gavin/AWC_control/src/install/setup.ps1'
+[9.511s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gavin/AWC_control/src/install/local_setup.sh'
+[9.512s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gavin/AWC_control/src/install/_local_setup_util_sh.py'
+[9.514s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gavin/AWC_control/src/install/setup.sh'
+[9.523s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gavin/AWC_control/src/install/local_setup.bash'
+[9.524s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gavin/AWC_control/src/install/setup.bash'
+[9.533s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gavin/AWC_control/src/install/local_setup.zsh'
+[9.534s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gavin/AWC_control/src/install/setup.zsh'
