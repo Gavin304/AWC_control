@@ -1,121 +1,68 @@
-#!/usr/bin/env python3
-import rclpy
-from rclpy.node import Node
-from rclpy.constants import S_TO_NS
-from rclpy.time import Time
-from std_msgs.msg import Float64MultiArray
-from geometry_msgs.msg import TwistStamped
-from sensor_msgs.msg import JointState
-from nav_msgs.msg import Odometry
+from launch import LaunchDescription
+from launch_ros.actions import Node
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
 import os
-import yaml
-import numpy as np
-from tf2_ros import TransformBroadcaster
-from geometry_msgs.msg import TransformStamped
-import math
 from ament_index_python.packages import get_package_share_directory
-from tf_transformations import quaternion_from_euler
+
+def generate_launch_description():
+    unitree_launch = os.path.join(
+        get_package_share_directory('unitree_lidar_ros2'),
+        'launch',
+        'launch.py' # Make sure this is the correct launch file from the package
+    )
+
+    scanner_arg = DeclareLaunchArgument(
+        name='scanner', default_value='scanner',
+        description='Namespace for sample topics'
+    )
+    unilidar_arg = DeclareLaunchArgument(
+        name='unilidar', default_value='unilidar',
+        description='Namespace for input pointcloud topic'
+    )
+    # --- TF SECTION ---
+    static_tf_base_to_lidar_frame = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=[
+            '0.3', '0', '1.2',  # X, Y, Z offset from base_link to the lidar
+            '0', '0', '0',      # Roll, Pitch, Yaw offset
+            'base_link',        # Parent Frame
+            'unilidar_lidar'    # Child Frame (This is a common choice, verify from the sensor's docs/TF tree)
+        ]
+    )
 
 
-class AWCTFBroadcaster(Node):
+    pointcloud_to_laserscan_node = Node(
+        package='pointcloud_to_laserscan',
+        executable='pointcloud_to_laserscan_node',
+        name='pointcloud_to_laserscan',
+        remappings=[
+            ('cloud_in', [LaunchConfiguration('unilidar'), '/cloud']),
+            ('scan', '/scan')
+        ],
+        parameters=[{
+            # ✅ The target_frame should match the 'child frame' of your static transform.
+            'target_frame': 'unilidar_lidar',
+            'transform_tolerance': 0.05,
+            'min_height': 0.5,
+            'max_height': 1.2,
+            'angle_min': -3.14159,
+            'angle_max': 3.14159,
+            'angle_increment': 0.0087,
+            'scan_time': 0.1,
+            'range_min': 0.56,
+            'range_max': 10.0,
+            'use_inf': True
+        }]
+    )
 
-    def __init__(self):
-        super().__init__("awc_controller")
-
-        # EXTRACT DATA FROM PARAMETER CONFIG
-        package_dir = get_package_share_directory('tf_publisher')
-        yaml_file_path = os.path.join(package_dir, 'config', 'awc_description.yaml')
-        with open(yaml_file_path, 'r') as file:
-            config = yaml.safe_load(file)
-
-        self.wheel_radius_ = config['wheel_radius']
-        self.wheel_separation_ = config['wheel_separation']
-
-        #Initialize Paramters
-        self.wheel_radius_ = self.wheel_radius_ * 2
-        self.wheel_separation_ = self.wheel_separation_ * 2
-
-        self.x_ = 0.0
-        self.y_ = 0.0
-        self.theta_ = 0.0
-
-        self.current_linear_ = 0.0
-        self.current_angular_ = 0.0
-
-        self.wheel_cmd_pub_ = self.create_publisher(Float64MultiArray, "velocity_controller/commands", 10)
-        self.vel_sub_ = self.create_subscription(TwistStamped, "/cmd_vel_joy", self.velCallback, 10)
-        self.odom_pub_ = self.create_publisher(Odometry, "awc_controller/odom", 10)
-
-        self.br_ = TransformBroadcaster(self)
-        self.transform_stamped_ = TransformStamped()
-        self.transform_stamped_.header.frame_id = "odom"
-        self.transform_stamped_.child_frame_id = "base_link"
-
-        self.prev_time_ = self.get_clock().now()
-
-        # Timer for fake odometry integration
-        self.timer_ = self.create_timer(0.02, self.timerCallback)  # 50 Hz
-
-        self.odom_msg_ = Odometry()
-
-    def velCallback(self, msg):
-        # Save the latest commanded velocities
-        self.current_linear_ = msg.twist.linear.x
-        self.current_angular_ = msg.twist.angular.z
-
-        # Optionally publish wheel commands if needed
-        robot_speed = np.array([[self.current_linear_],
-                                [self.current_angular_]])
-        wheel_speed = np.matmul(np.linalg.inv(self.speed_conversion_), robot_speed)
-        wheel_speed_msg = Float64MultiArray()
-        wheel_speed_msg.data = [wheel_speed[1, 0], wheel_speed[0, 0]]
-        self.wheel_cmd_pub_.publish(wheel_speed_msg)
-
-    def timerCallback(self):
-        now = self.get_clock().now()
-        dt = (now - self.prev_time_).nanoseconds / 1e9
-        self.prev_time_ = now
-
-        # Integrate pose using last commanded velocities
-        d_theta = self.current_angular_ * dt
-        self.theta_ += d_theta
-        d_s = self.current_linear_ * dt
-        self.x_ += d_s * math.cos(self.theta_)
-        self.y_ += d_s * math.sin(self.theta_)
-
-        # Compose and publish the odom message
-        q = quaternion_from_euler(0, 0, self.theta_)
-        self.odom_msg_.header.stamp = now.to_msg()
-        self.odom_msg_.pose.pose.position.x = self.x_
-        self.odom_msg_.pose.pose.position.y = self.y_
-        self.odom_msg_.pose.pose.orientation.x = q[0]
-        self.odom_msg_.pose.pose.orientation.y = q[1]
-        self.odom_msg_.pose.pose.orientation.z = q[2]
-        self.odom_msg_.pose.pose.orientation.w = q[3]
-        self.odom_msg_.twist.twist.linear.x = self.current_linear_
-        self.odom_msg_.twist.twist.angular.z = self.current_angular_
-        self.odom_pub_.publish(self.odom_msg_)
-
-        # TF
-        self.transform_stamped_.transform.translation.x = self.x_
-        self.transform_stamped_.transform.translation.y = self.y_
-        self.transform_stamped_.transform.rotation.x = q[0]
-        self.transform_stamped_.transform.rotation.y = q[1]
-        self.transform_stamped_.transform.rotation.z = q[2]
-        self.transform_stamped_.transform.rotation.w = q[3]
-        self.transform_stamped_.header.stamp = now.to_msg()
-        self.br_.sendTransform(self.transform_stamped_)
-
-
-def main():
-    rclpy.init()
-
-    simple_controller = AWCTFBroadcaster()
-    rclpy.spin(simple_controller)
-    
-    simple_controller.destroy_node()
-    rclpy.shutdown()
-
-
-if __name__ == '__main__':
-    main()
+    return LaunchDescription([
+        scanner_arg,
+        unilidar_arg,
+        # Do NOT include odom_to_base_node here.
+        static_tf_base_to_lidar_frame, # Use the single, correct static transform.
+        IncludeLaunchDescription(PythonLaunchDescriptionSource(unitree_launch)),
+        pointcloud_to_laserscan_node
+    ])

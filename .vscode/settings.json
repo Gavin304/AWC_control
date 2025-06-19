@@ -102,6 +102,7 @@
     "cmake.sourceDirectory": "/home/gavin/AWC_control/src/awc_interfaces",
     "ros.distro": "humble",
     "files.associations": {
-        "limits": "cpp"
+        "limits": "cpp",
+        "chrono": "cpp"
     }
 }
