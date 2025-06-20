@@ -23,7 +23,6 @@ def generate_launch_description():
     )
 
     # --- TF SECTION ---
-
     odom_to_base_node = Node(
         package='tf_publisher',
         executable='tf_broadcaster',
@@ -42,6 +41,7 @@ def generate_launch_description():
         ]
     )
 
+    # --- Pointcloud to Laserscan ---
     pointcloud_to_laserscan_node = Node(
         package='pointcloud_to_laserscan',
         executable='pointcloud_to_laserscan_node',
@@ -52,18 +52,22 @@ def generate_launch_description():
         ],
         parameters=[{
             'target_frame': 'base_link',
-            'transform_tolerance': 0.05,
+            'transform_tolerance': 0.5,
             'min_height': 0.5,
             'max_height': 1.2,
             'angle_min': -3.14159,
             'angle_max': 3.14159,
             'angle_increment': 0.0087,
             'scan_time': 0.1,
-            'range_min': 0.57,
+            'range_min': 0.55,
             'range_max': 10.0,
-            'use_inf': True
+            'use_inf': True,
+            'override_frame_id': 'base_link',
+            'override_laser_scan_time': True
         }]
     )
+
+
 
     return LaunchDescription([
         scanner_arg,
@@ -71,5 +75,5 @@ def generate_launch_description():
         odom_to_base_node,
         static_tf_base_to_imu_initial,
         IncludeLaunchDescription(PythonLaunchDescriptionSource(unitree_launch)),
-        pointcloud_to_laserscan_node
+        pointcloud_to_laserscan_node,
     ])

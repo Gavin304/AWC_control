@@ -78,6 +78,7 @@ class AWCTFBroadcaster(Node):
 
     def timerCallback(self):
         now = self.get_clock().now()
+        
         dt = (now - self.prev_time_).nanoseconds / 1e9
         self.prev_time_ = now
 
@@ -103,14 +104,19 @@ class AWCTFBroadcaster(Node):
         self.odom_pub_.publish(self.odom_msg_)
 
         # TF
+        self.transform_stamped_.header.stamp = now.to_msg()
+        self.transform_stamped_.header.frame_id = "odom"
+        self.transform_stamped_.child_frame_id = "base_link"
         self.transform_stamped_.transform.translation.x = self.x_
         self.transform_stamped_.transform.translation.y = self.y_
+        self.transform_stamped_.transform.translation.z = 0.0  # <-- Add this line
         self.transform_stamped_.transform.rotation.x = q[0]
         self.transform_stamped_.transform.rotation.y = q[1]
         self.transform_stamped_.transform.rotation.z = q[2]
         self.transform_stamped_.transform.rotation.w = q[3]
-        self.transform_stamped_.header.stamp = now.to_msg()
         self.br_.sendTransform(self.transform_stamped_)
+
+        #self.get_logger().info(f"Publishing TF: x={self.x_}, y={self.y_}, theta={self.theta_}")
 
 
 def main():
