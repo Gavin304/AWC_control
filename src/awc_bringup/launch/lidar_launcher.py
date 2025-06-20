@@ -27,7 +27,7 @@ def generate_launch_description():
     odom_to_base_node = Node(
         package='tf_publisher',
         executable='tf_broadcaster',
-        name='awc_odometry_node',
+        name='awc_controller',
         output='screen'
     )
 
@@ -36,21 +36,9 @@ def generate_launch_description():
         executable='static_transform_publisher',
         arguments=[
             '0.3', '0', '1.2',
-            '0', '0', '0',
+            '3.14159', '0', '0',
             'base_link',
             'unilidar_imu_initial'
-        ]
-    )
-
-    # ✅ Final fix: base_link → unilidar_imu (direct, to avoid filter drop)
-    static_tf_base_to_imu_direct = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        arguments=[
-            '0.3', '0', '1.2',
-            '0', '0', '0',
-            'base_link',
-            'unilidar_imu'
         ]
     )
 
@@ -82,7 +70,6 @@ def generate_launch_description():
         unilidar_arg,
         odom_to_base_node,
         static_tf_base_to_imu_initial,
-        static_tf_base_to_imu_direct, 
         IncludeLaunchDescription(PythonLaunchDescriptionSource(unitree_launch)),
         pointcloud_to_laserscan_node
     ])

@@ -1,68 +1,149 @@
-from launch import LaunchDescription
-from launch_ros.actions import Node
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
+
+
+#!/usr/bin/env python3
+import rclpy
+from rclpy.node import Node
+from rclpy.constants import S_TO_NS
+from rclpy.time import Time
+from std_msgs.msg import Float64MultiArray
+from geometry_msgs.msg import TwistStamped
+from sensor_msgs.msg import JointState
+from nav_msgs.msg import Odometry
 import os
+import yaml
+import numpy as np
+from tf2_ros import TransformBroadcaster
+from geometry_msgs.msg import TransformStamped
+import math
 from ament_index_python.packages import get_package_share_directory
-
-def generate_launch_description():
-    unitree_launch = os.path.join(
-        get_package_share_directory('unitree_lidar_ros2'),
-        'launch',
-        'launch.py' # Make sure this is the correct launch file from the package
-    )
-
-    scanner_arg = DeclareLaunchArgument(
-        name='scanner', default_value='scanner',
-        description='Namespace for sample topics'
-    )
-    unilidar_arg = DeclareLaunchArgument(
-        name='unilidar', default_value='unilidar',
-        description='Namespace for input pointcloud topic'
-    )
-    # --- TF SECTION ---
-    static_tf_base_to_lidar_frame = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        arguments=[
-            '0.3', '0', '1.2',  # X, Y, Z offset from base_link to the lidar
-            '0', '0', '0',      # Roll, Pitch, Yaw offset
-            'base_link',        # Parent Frame
-            'unilidar_lidar'    # Child Frame (This is a common choice, verify from the sensor's docs/TF tree)
-        ]
-    )
+from tf_transformations import quaternion_from_euler
 
 
-    pointcloud_to_laserscan_node = Node(
-        package='pointcloud_to_laserscan',
-        executable='pointcloud_to_laserscan_node',
-        name='pointcloud_to_laserscan',
-        remappings=[
-            ('cloud_in', [LaunchConfiguration('unilidar'), '/cloud']),
-            ('scan', '/scan')
-        ],
-        parameters=[{
-            # ✅ The target_frame should match the 'child frame' of your static transform.
-            'target_frame': 'unilidar_lidar',
-            'transform_tolerance': 0.05,
-            'min_height': 0.5,
-            'max_height': 1.2,
-            'angle_min': -3.14159,
-            'angle_max': 3.14159,
-            'angle_increment': 0.0087,
-            'scan_time': 0.1,
-            'range_min': 0.56,
-            'range_max': 10.0,
-            'use_inf': True
-        }]
-    )
+class AWCTFBroadcaster(Node):
 
-    return LaunchDescription([
-        scanner_arg,
-        unilidar_arg,
-        # Do NOT include odom_to_base_node here.
-        static_tf_base_to_lidar_frame, # Use the single, correct static transform.
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(unitree_launch)),
-        pointcloud_to_laserscan_node
-    ])
+    def __init__(self):
+        super().__init__("awc_controller")
+
+        # EXTRACT DATA FROM PARAMETER CONFIG
+        package_dir = get_package_share_directory('tf_publisher')
+        yaml_file_path = os.path.join(package_dir, 'config', 'awc_description.yaml')
+        with open(yaml_file_path, 'r') as file:
+            config = yaml.safe_load(file)
+
+        self.wheel_radius_ = config['wheel_radius']
+        self.wheel_separation_ = config['wheel_separation']
+
+        #Initialize Paramters
+        self.wheel_radius_ = self.wheel_radius_ * 2
+        self.wheel_separation_ = self.wheel_separation_ * 2
+
+        self.left_wheel_prev_pos_ = 0.0
+        self.right_wheel_prev_pos_ = 0.0
+        self.x_ = 0.0
+        self.y_ = 0.0
+        self.theta_ = 0.0
+
+        self.wheel_cmd_pub_ = self.create_publisher(Float64MultiArray, "velocity_controller/commands", 10)
+        self.vel_sub_ = self.create_subscription(TwistStamped, "awc_controller/cmd_vel", self.velCallback, 10)
+        self.joint_sub_ = self.create_subscription(JointState,"joint_states", self.jointCallback, 10)  #Joint States? idk maybe change form encoder      
+        self.odom_pub_ = self.create_publisher(Odometry, "awc_controller/odom", 10)
+
+        self.speed_conversion_ = np.array([[self.wheel_radius_/2, self.wheel_radius_/2],
+                                           [self.wheel_radius_/self.wheel_separation_, -self.wheel_radius_/self.wheel_separation_]])
+
+        # Fill the Odometry message with invariant parameters
+        self.odom_msg_ = Odometry()
+        self.odom_msg_.header.frame_id = "odom"
+        self.odom_msg_.child_frame_id = "base_link"
+        self.odom_msg_.pose.pose.orientation.x = 0.0
+        self.odom_msg_.pose.pose.orientation.y = 0.0
+        self.odom_msg_.pose.pose.orientation.z = 0.0
+        self.odom_msg_.pose.pose.orientation.w = 1.0
+
+        # Fill the TF message
+        self.br_ = TransformBroadcaster(self)
+        self.transform_stamped_ = TransformStamped()
+        self.transform_stamped_.header.frame_id = "odom"
+        self.transform_stamped_.child_frame_id = "base_link"
+
+        self.prev_time_ = self.get_clock().now()
+
+
+    def velCallback(self, msg):
+        # Implements the differential kinematic model
+        # Given v and w, calculate the velocities of the wheels
+        robot_speed = np.array([[msg.twist.linear.x],
+                                [msg.twist.angular.z]])
+        wheel_speed = np.matmul(np.linalg.inv(self.speed_conversion_), robot_speed) 
+
+        wheel_speed_msg = Float64MultiArray()
+        wheel_speed_msg.data = [wheel_speed[1, 0], wheel_speed[0, 0]]
+
+        self.wheel_cmd_pub_.publish(wheel_speed_msg)
+
+    
+    def jointCallback(self, msg):
+        # Implements the inverse differential kinematic model
+        # Given the position of the wheels, calculates their velocities
+        # then calculates the velocity of the robot wrt the robot frame
+        # and then converts it in the global frame and publishes the TF
+        dp_left = msg.position[1] - self.left_wheel_prev_pos_
+        dp_right = msg.position[0] - self.right_wheel_prev_pos_
+        dt = Time.from_msg(msg.header.stamp) - self.prev_time_
+
+        # Actualize the prev pose for the next itheration
+        self.left_wheel_prev_pos_ = msg.position[1]
+        self.right_wheel_prev_pos_ = msg.position[0]
+        self.prev_time_ = Time.from_msg(msg.header.stamp)
+
+        # Calculate the rotational speed of each wheel
+        fi_left = dp_left / (dt.nanoseconds / S_TO_NS)
+        fi_right = dp_right / (dt.nanoseconds / S_TO_NS)
+
+        # Calculate the linear and angular velocity
+        linear = (self.wheel_radius_ * fi_right + self.wheel_radius_ * fi_left) / 2
+        angular = (self.wheel_radius_ * fi_right - self.wheel_radius_ * fi_left) / self.wheel_separation_
+
+        # Calculate the position increment
+        d_s = (self.wheel_radius_ * dp_right + self.wheel_radius_ * dp_left) / 2
+        d_theta = (self.wheel_radius_ * dp_right - self.wheel_radius_ * dp_left) / self.wheel_separation_
+        self.theta_ += d_theta
+        self.x_ += d_s * math.cos(self.theta_)
+        self.y_ += d_s * math.sin(self.theta_)
+        
+        # Compose and publish the odom message
+        q = quaternion_from_euler(0, 0, self.theta_)
+        self.odom_msg_.header.stamp = self.get_clock().now().to_msg()
+        self.odom_msg_.pose.pose.position.x = self.x_
+        self.odom_msg_.pose.pose.position.y = self.y_
+        self.odom_msg_.pose.pose.orientation.x = q[0]
+        self.odom_msg_.pose.pose.orientation.y = q[1]
+        self.odom_msg_.pose.pose.orientation.z = q[2]
+        self.odom_msg_.pose.pose.orientation.w = q[3]
+        self.odom_msg_.twist.twist.linear.x = linear
+        self.odom_msg_.twist.twist.angular.z = angular
+        self.odom_pub_.publish(self.odom_msg_)
+
+        # TF
+        self.transform_stamped_.transform.translation.x = self.x_
+        self.transform_stamped_.transform.translation.y = self.y_
+        self.transform_stamped_.transform.rotation.x = q[0]
+        self.transform_stamped_.transform.rotation.y = q[1]
+        self.transform_stamped_.transform.rotation.z = q[2]
+        self.transform_stamped_.transform.rotation.w = q[3]
+        self.transform_stamped_.header.stamp = self.get_clock().now().to_msg()
+        self.br_.sendTransform(self.transform_stamped_)
+
+
+def main():
+    rclpy.init()
+
+    simple_controller = AWCTFBroadcaster()
+    rclpy.spin(simple_controller)
+    
+    simple_controller.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
