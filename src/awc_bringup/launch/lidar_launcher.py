@@ -36,7 +36,7 @@ def generate_launch_description():
         executable='static_transform_publisher',
         arguments=[
             '0.3', '0', '1.2',
-            '3.14159', '0', '0',
+            '0', '0', '3.14159',
             'base_link',
             'unilidar_imu_initial'
         ]
@@ -59,7 +59,7 @@ def generate_launch_description():
             'angle_max': 3.14159,
             'angle_increment': 0.0087,
             'scan_time': 0.1,
-            'range_min': 0.56,
+            'range_min': 0.57,
             'range_max': 10.0,
             'use_inf': True
         }]
