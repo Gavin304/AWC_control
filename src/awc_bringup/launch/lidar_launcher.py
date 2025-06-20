@@ -51,7 +51,7 @@ def generate_launch_description():
             ('scan', '/scan')
         ],
         parameters=[{
-            'target_frame': 'unilidar_imu',
+            'target_frame': 'base_link',
             'transform_tolerance': 0.05,
             'min_height': 0.5,
             'max_height': 1.2,

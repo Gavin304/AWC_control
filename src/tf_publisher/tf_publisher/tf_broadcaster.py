@@ -3,7 +3,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.time import Time
 from std_msgs.msg import Float64MultiArray
-from geometry_msgs.msg import TwistStamped
+from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 import os
 import yaml
@@ -34,7 +34,8 @@ class AWCTFBroadcaster(Node):
         self.theta_ = 0.0
 
         self.wheel_cmd_pub_ = self.create_publisher(Float64MultiArray, "velocity_controller/commands", 10)
-        self.vel_sub_ = self.create_subscription(TwistStamped, "/cmd_vel_joy", self.velCallback, 10)
+        # Change subscription to Twist
+        self.vel_sub_ = self.create_subscription(Twist, "/cmd_vel_joy", self.velCallback, 10)
         self.odom_pub_ = self.create_publisher(Odometry, "/odom", 10)
 
         self.speed_conversion_ = np.array([[self.wheel_radius_/2, self.wheel_radius_/2],
@@ -65,8 +66,8 @@ class AWCTFBroadcaster(Node):
 
     def velCallback(self, msg):
         # Store last commanded velocities
-        self.last_v_ = msg.twist.linear.x
-        self.last_w_ = msg.twist.angular.z
+        self.last_v_ = msg.linear.x
+        self.last_w_ = msg.angular.z
 
         # Optionally publish wheel commands as before
         robot_speed = np.array([[self.last_v_], [self.last_w_]])
