@@ -1,0 +1,21 @@
+[6.708s] Invoking command in '/home/gavin/AWC_control/src/joystick_ros2': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/joystick_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/joystick_ros2 build --build-base /home/gavin/AWC_control/src/build/joystick_ros2/build install --record /home/gavin/AWC_control/src/build/joystick_ros2/install.log --single-version-externally-managed install_data
+[7.768s] running egg_info
+[7.769s] writing ../build/joystick_ros2/joystick_ros2.egg-info/PKG-INFO
+[7.770s] writing dependency_links to ../build/joystick_ros2/joystick_ros2.egg-info/dependency_links.txt
+[7.772s] writing entry points to ../build/joystick_ros2/joystick_ros2.egg-info/entry_points.txt
+[7.773s] writing requirements to ../build/joystick_ros2/joystick_ros2.egg-info/requires.txt
+[7.773s] writing top-level names to ../build/joystick_ros2/joystick_ros2.egg-info/top_level.txt
+[7.779s] reading manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[7.783s] adding license file 'LICENSE'
+[7.784s] writing manifest file '../build/joystick_ros2/joystick_ros2.egg-info/SOURCES.txt'
+[7.784s] running build
+[7.784s] running build_py
+[7.786s] running install
+[7.789s] running install_lib
+[7.799s] running install_data
+[7.801s] running install_egg_info
+[7.810s] removing '/home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2-0.0.1-py3.10.egg-info' (and everything under it)
+[7.811s] Copying ../build/joystick_ros2/joystick_ros2.egg-info to /home/gavin/AWC_control/src/install/joystick_ros2/lib/python3.10/site-packages/joystick_ros2-0.0.1-py3.10.egg-info
+[7.811s] running install_scripts
+[7.904s] Installing joystick_ros2 script to /home/gavin/AWC_control/src/install/joystick_ros2/lib/joystick_ros2
+[7.905s] writing list of installed files to '/home/gavin/AWC_control/src/build/joystick_ros2/install.log'

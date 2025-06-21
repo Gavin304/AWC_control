@@ -1,0 +1,20 @@
+[6.738s] Invoking command in '/home/gavin/AWC_control/src/nav2_commander': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/nav2_commander/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/nav2_commander/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/nav2_commander build --build-base /home/gavin/AWC_control/src/build/nav2_commander/build install --record /home/gavin/AWC_control/src/build/nav2_commander/install.log --single-version-externally-managed install_data
+[8.067s] running egg_info
+[8.069s] writing ../build/nav2_commander/nav2_commander.egg-info/PKG-INFO
+[8.069s] writing dependency_links to ../build/nav2_commander/nav2_commander.egg-info/dependency_links.txt
+[8.070s] writing entry points to ../build/nav2_commander/nav2_commander.egg-info/entry_points.txt
+[8.070s] writing requirements to ../build/nav2_commander/nav2_commander.egg-info/requires.txt
+[8.070s] writing top-level names to ../build/nav2_commander/nav2_commander.egg-info/top_level.txt
+[8.073s] reading manifest file '../build/nav2_commander/nav2_commander.egg-info/SOURCES.txt'
+[8.075s] writing manifest file '../build/nav2_commander/nav2_commander.egg-info/SOURCES.txt'
+[8.077s] running build
+[8.077s] running build_py
+[8.077s] running install
+[8.077s] running install_lib
+[8.080s] running install_data
+[8.080s] running install_egg_info
+[8.085s] removing '/home/gavin/AWC_control/src/install/nav2_commander/lib/python3.10/site-packages/nav2_commander-0.0.0-py3.10.egg-info' (and everything under it)
+[8.085s] Copying ../build/nav2_commander/nav2_commander.egg-info to /home/gavin/AWC_control/src/install/nav2_commander/lib/python3.10/site-packages/nav2_commander-0.0.0-py3.10.egg-info
+[8.086s] running install_scripts
+[8.126s] Installing nav2_command script to /home/gavin/AWC_control/src/install/nav2_commander/lib/nav2_commander
+[8.127s] writing list of installed files to '/home/gavin/AWC_control/src/build/nav2_commander/install.log'

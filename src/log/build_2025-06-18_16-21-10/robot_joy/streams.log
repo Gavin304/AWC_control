@@ -1,0 +1,37 @@
+[4.371s] Invoking command in '/home/gavin/AWC_control/src/robot_joy': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/robot_joy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/robot_joy build --build-base /home/gavin/AWC_control/src/build/robot_joy/build install --record /home/gavin/AWC_control/src/build/robot_joy/install.log --single-version-externally-managed install_data
+[5.113s] running egg_info
+[5.115s] creating ../build/robot_joy/robot_joy.egg-info
+[5.115s] writing ../build/robot_joy/robot_joy.egg-info/PKG-INFO
+[5.115s] writing dependency_links to ../build/robot_joy/robot_joy.egg-info/dependency_links.txt
+[5.118s] writing entry points to ../build/robot_joy/robot_joy.egg-info/entry_points.txt
+[5.118s] writing requirements to ../build/robot_joy/robot_joy.egg-info/requires.txt
+[5.121s] writing top-level names to ../build/robot_joy/robot_joy.egg-info/top_level.txt
+[5.121s] writing manifest file '../build/robot_joy/robot_joy.egg-info/SOURCES.txt'
+[5.122s] reading manifest file '../build/robot_joy/robot_joy.egg-info/SOURCES.txt'
+[5.122s] writing manifest file '../build/robot_joy/robot_joy.egg-info/SOURCES.txt'
+[5.122s] running build
+[5.122s] running build_py
+[5.122s] creating /home/gavin/AWC_control/src/build/robot_joy/build
+[5.123s] creating /home/gavin/AWC_control/src/build/robot_joy/build/lib
+[5.123s] creating /home/gavin/AWC_control/src/build/robot_joy/build/lib/robot_joy
+[5.123s] copying robot_joy/wheeltec_keyboard.py -> /home/gavin/AWC_control/src/build/robot_joy/build/lib/robot_joy
+[5.123s] copying robot_joy/__init__.py -> /home/gavin/AWC_control/src/build/robot_joy/build/lib/robot_joy
+[5.123s] running install
+[5.127s] running install_lib
+[5.127s] creating /home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages/robot_joy
+[5.128s] copying /home/gavin/AWC_control/src/build/robot_joy/build/lib/robot_joy/wheeltec_keyboard.py -> /home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages/robot_joy
+[5.128s] copying /home/gavin/AWC_control/src/build/robot_joy/build/lib/robot_joy/__init__.py -> /home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages/robot_joy
+[5.132s] byte-compiling /home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages/robot_joy/wheeltec_keyboard.py to wheeltec_keyboard.cpython-310.pyc
+[5.132s] byte-compiling /home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages/robot_joy/__init__.py to __init__.cpython-310.pyc
+[5.136s] running install_data
+[5.137s] creating /home/gavin/AWC_control/src/install/robot_joy/share/ament_index
+[5.137s] creating /home/gavin/AWC_control/src/install/robot_joy/share/ament_index/resource_index
+[5.138s] creating /home/gavin/AWC_control/src/install/robot_joy/share/ament_index/resource_index/packages
+[5.138s] copying resource/robot_joy -> /home/gavin/AWC_control/src/install/robot_joy/share/ament_index/resource_index/packages
+[5.138s] copying package.xml -> /home/gavin/AWC_control/src/install/robot_joy/share/robot_joy
+[5.138s] running install_egg_info
+[5.138s] Copying ../build/robot_joy/robot_joy.egg-info to /home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages/robot_joy-0.0.0-py3.10.egg-info
+[5.139s] running install_scripts
+[5.195s] Installing wheeltec_keyboard.py script to /home/gavin/AWC_control/src/install/robot_joy/lib/robot_joy
+[5.195s] writing list of installed files to '/home/gavin/AWC_control/src/build/robot_joy/install.log'
+[5.370s] Invoked command in '/home/gavin/AWC_control/src/robot_joy' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/robot_joy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/robot_joy/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/robot_joy build --build-base /home/gavin/AWC_control/src/build/robot_joy/build install --record /home/gavin/AWC_control/src/build/robot_joy/install.log --single-version-externally-managed install_data

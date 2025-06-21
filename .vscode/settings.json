@@ -100,5 +100,9 @@
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "cmake.sourceDirectory": "/home/gavin/AWC_control/src/awc_interfaces",
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "files.associations": {
+        "limits": "cpp",
+        "chrono": "cpp"
+    }
 }

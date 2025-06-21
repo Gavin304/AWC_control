@@ -83,18 +83,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/gavin/AWC_control/src/pointcloud_to_laserscan/include/")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pointcloud_to_laserscan/environment" TYPE FILE FILES "/home/gavin/install/ament_package/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pointcloud_to_laserscan/environment" TYPE FILE FILES "/home/gavin/AWC_control/src/build/pointcloud_to_laserscan/ament_cmake_environment_hooks/library_path.dsv")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblaserscan_to_pointcloud.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/liblaserscan_to_pointcloud.so")
     file(RPATH_CHECK
@@ -129,7 +117,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libpointcloud_to_laserscan.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libpointcloud_to_laserscan.so"
-         OLD_RPATH "/home/gavin/AWC_control/src/build/pointcloud_to_laserscan:/home/gavin/install/tracetools/lib:/home/gavin/install/ament_index_cpp/lib:/home/gavin/install/fastcdr/lib:/home/gavin/install/rosidl_typesupport_introspection_c/lib:/home/gavin/install/rosidl_runtime_c/lib:/home/gavin/install/rcutils/lib:/opt/ros/humble/lib:/home/gavin/miniconda3/lib:"
+         OLD_RPATH "/home/gavin/install/tracetools/lib:/home/gavin/install/ament_index_cpp/lib:/home/gavin/install/fastcdr/lib:/home/gavin/install/rosidl_typesupport_introspection_c/lib:/home/gavin/install/rosidl_runtime_c/lib:/home/gavin/install/rcutils/lib:/opt/ros/humble/lib:/home/gavin/miniconda3/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libpointcloud_to_laserscan.so")
@@ -152,12 +140,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher"
-         OLD_RPATH "/home/gavin/AWC_control/src/build/pointcloud_to_laserscan:/home/gavin/install/tracetools/lib:/home/gavin/install/ament_index_cpp/lib:/home/gavin/install/fastcdr/lib:/home/gavin/install/rosidl_typesupport_introspection_c/lib:/home/gavin/install/rosidl_runtime_c/lib:/home/gavin/install/rcutils/lib:/opt/ros/humble/lib:/home/gavin/miniconda3/lib:"
+         OLD_RPATH "/home/gavin/install/ament_index_cpp/lib:/home/gavin/install/tracetools/lib:/home/gavin/install/fastcdr/lib:/home/gavin/install/rosidl_typesupport_introspection_c/lib:/home/gavin/install/rosidl_runtime_c/lib:/home/gavin/install/rcutils/lib:/opt/ros/humble/lib:/home/gavin/miniconda3/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/pointcloud_to_laserscan/dummy_pointcloud_publisher")
     endif()
   endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/pointcloud_to_laserscan" TYPE DIRECTORY FILES "/home/gavin/AWC_control/src/pointcloud_to_laserscan/include")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -218,14 +210,6 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pointcloud_to_laserscan/cmake" TYPE FILE FILES "/home/gavin/AWC_control/src/build/pointcloud_to_laserscan/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pointcloud_to_laserscan/cmake" TYPE FILE FILES "/home/gavin/AWC_control/src/build/pointcloud_to_laserscan/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pointcloud_to_laserscan/cmake" TYPE FILE FILES "/home/gavin/AWC_control/src/build/pointcloud_to_laserscan/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -16,7 +16,7 @@ set(_pointcloud_to_laserscan_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT pointcloud_to_laserscan_FIND_QUIETLY)
-  message(STATUS "Found pointcloud_to_laserscan: 2.0.1 (${pointcloud_to_laserscan_DIR})")
+  message(STATUS "Found pointcloud_to_laserscan: 2.0.2 (${pointcloud_to_laserscan_DIR})")
 endif()
 
 # warn when using a deprecated package
@@ -36,7 +36,7 @@ endif()
 set(pointcloud_to_laserscan_FOUND_AMENT_PACKAGE TRUE)
 
 # include all config extra files
-set(_extras "ament_cmake_export_dependencies-extras.cmake;ament_cmake_export_include_directories-extras.cmake;ament_cmake_export_libraries-extras.cmake")
+set(_extras "ament_cmake_export_dependencies-extras.cmake")
 foreach(_extra ${_extras})
   include("${pointcloud_to_laserscan_DIR}/${_extra}")
 endforeach()

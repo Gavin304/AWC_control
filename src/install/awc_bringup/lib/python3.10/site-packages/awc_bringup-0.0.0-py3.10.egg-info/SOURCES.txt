@@ -9,6 +9,7 @@ setup.py
 ../build/awc_bringup/awc_bringup.egg-info/top_level.txt
 ../build/awc_bringup/awc_bringup.egg-info/zip-safe
 awc_bringup/__init__.py
+launch/joystick_launcher.py
 launch/lidar_launcher.py
 resource/awc_bringup
 test/test_copyright.py

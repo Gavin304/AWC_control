@@ -21,9 +21,9 @@ class WheelchairTeleop(Node):
 
     def joy_callback(self, msg):
         # Map joystick axes to velocities
-        self.vx = float(msg.axes[1])
+        self.vx = float(msg.axes[1]) *2
         self.vy = 0.0
-        self.w = float(msg.axes[3])
+        self.w = float(msg.axes[3]) *5
 
         # Toggle between joystick and navigation mode
         if msg.axes[6] == 1 or msg.axes[6] == -1:

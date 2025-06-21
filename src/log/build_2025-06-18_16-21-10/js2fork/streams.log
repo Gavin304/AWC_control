@@ -1,0 +1,37 @@
+[4.474s] Invoking command in '/home/gavin/AWC_control/src/js2fork': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/js2fork/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/js2fork build --build-base /home/gavin/AWC_control/src/build/js2fork/build install --record /home/gavin/AWC_control/src/build/js2fork/install.log --single-version-externally-managed install_data
+[5.287s] running egg_info
+[5.287s] creating ../build/js2fork/js2fork.egg-info
+[5.287s] writing ../build/js2fork/js2fork.egg-info/PKG-INFO
+[5.288s] writing dependency_links to ../build/js2fork/js2fork.egg-info/dependency_links.txt
+[5.288s] writing entry points to ../build/js2fork/js2fork.egg-info/entry_points.txt
+[5.288s] writing requirements to ../build/js2fork/js2fork.egg-info/requires.txt
+[5.288s] writing top-level names to ../build/js2fork/js2fork.egg-info/top_level.txt
+[5.288s] writing manifest file '../build/js2fork/js2fork.egg-info/SOURCES.txt'
+[5.292s] reading manifest file '../build/js2fork/js2fork.egg-info/SOURCES.txt'
+[5.293s] writing manifest file '../build/js2fork/js2fork.egg-info/SOURCES.txt'
+[5.293s] running build
+[5.293s] running build_py
+[5.293s] creating /home/gavin/AWC_control/src/build/js2fork/build
+[5.293s] creating /home/gavin/AWC_control/src/build/js2fork/build/lib
+[5.293s] creating /home/gavin/AWC_control/src/build/js2fork/build/lib/js2fork
+[5.294s] copying js2fork/__init__.py -> /home/gavin/AWC_control/src/build/js2fork/build/lib/js2fork
+[5.294s] copying js2fork/js2fork.py -> /home/gavin/AWC_control/src/build/js2fork/build/lib/js2fork
+[5.297s] running install
+[5.298s] running install_lib
+[5.298s] creating /home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages/js2fork
+[5.298s] copying /home/gavin/AWC_control/src/build/js2fork/build/lib/js2fork/__init__.py -> /home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages/js2fork
+[5.299s] copying /home/gavin/AWC_control/src/build/js2fork/build/lib/js2fork/js2fork.py -> /home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages/js2fork
+[5.303s] byte-compiling /home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages/js2fork/__init__.py to __init__.cpython-310.pyc
+[5.303s] byte-compiling /home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages/js2fork/js2fork.py to js2fork.cpython-310.pyc
+[5.304s] running install_data
+[5.304s] creating /home/gavin/AWC_control/src/install/js2fork/share/ament_index
+[5.305s] creating /home/gavin/AWC_control/src/install/js2fork/share/ament_index/resource_index
+[5.305s] creating /home/gavin/AWC_control/src/install/js2fork/share/ament_index/resource_index/packages
+[5.305s] copying resource/js2fork -> /home/gavin/AWC_control/src/install/js2fork/share/ament_index/resource_index/packages
+[5.307s] copying package.xml -> /home/gavin/AWC_control/src/install/js2fork/share/js2fork
+[5.308s] running install_egg_info
+[5.310s] Copying ../build/js2fork/js2fork.egg-info to /home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages/js2fork-0.0.0-py3.10.egg-info
+[5.314s] running install_scripts
+[5.369s] Installing js2fork script to /home/gavin/AWC_control/src/install/js2fork/lib/js2fork
+[5.370s] writing list of installed files to '/home/gavin/AWC_control/src/build/js2fork/install.log'
+[6.146s] Invoked command in '/home/gavin/AWC_control/src/js2fork' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/gavin/AWC_control/src/build/js2fork/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gavin/AWC_control/src/install/js2fork/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/js2fork build --build-base /home/gavin/AWC_control/src/build/js2fork/build install --record /home/gavin/AWC_control/src/build/js2fork/install.log --single-version-externally-managed install_data
