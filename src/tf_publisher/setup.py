@@ -23,7 +23,6 @@ setup(
     entry_points={
         'console_scripts': [
             'tf_broadcaster = tf_publisher.tf_broadcaster:main',
-            'dynamic_tilt_tf_broadcaster = tf_publisher.dynamic_tilt_tf_broadcaster:main',
         ],
     },
 )
