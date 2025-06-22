@@ -1,8 +1,18 @@
 from launch import LaunchDescription
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch.actions import TimerAction
+from launch.actions import DeclareLaunchArgument, TimerAction
 
 def generate_launch_description():
+    serial_port_arg = DeclareLaunchArgument(
+        'serial_port', default_value='/dev/ttyUSB0',
+        description='Serial port for Arduino'
+    )
+    wheel_radius_arg = DeclareLaunchArgument(
+        'wheel_radius', default_value='0.1651',
+        description='Wheel radius in meters'
+    )
+
     joystick_node = Node(
         package='joystick_ros2',
         executable='joystick_ros2',
@@ -21,7 +31,11 @@ def generate_launch_description():
         package='ros2arduino',
         executable='ros2arduino',
         name='ros2arduino',
-        output='screen'
+        output='screen',
+        parameters=[
+            {'serial_port': LaunchConfiguration('serial_port')},
+            {'wheel_radius': LaunchConfiguration('wheel_radius')}
+        ]
     )
 
     delayed_nodes = TimerAction(
@@ -30,6 +44,8 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        serial_port_arg,
+        wheel_radius_arg,
         joystick_node,
         delayed_nodes
     ])

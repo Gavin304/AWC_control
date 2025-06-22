@@ -3,6 +3,8 @@ from launch_ros.actions import Node
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import Node
+from launch.actions import DeclareLaunchArgument, TimerAction
 import os
 from ament_index_python.packages import get_package_share_directory
 
@@ -21,13 +23,24 @@ def generate_launch_description():
         name='unilidar', default_value='unilidar',
         description='Namespace for input pointcloud topic'
     )
+    wheel_radius_arg = DeclareLaunchArgument(
+        'wheel_radius', default_value='0.1651',
+        description='Wheel radius in meters'
+    )
+    wheel_separation_arg = DeclareLaunchArgument(
+        'wheel_separation', default_value='0.46',
+        description='Wheel separation in meters'
+    )
 
-    # --- TF SECTION ---
-    odom_to_base_node = Node(
+    tf_broadcaster_node = Node(
         package='tf_publisher',
         executable='tf_broadcaster',
         name='awc_controller',
-        output='screen'
+        output='screen',
+        parameters=[
+            {'wheel_radius': LaunchConfiguration('wheel_radius')},
+            {'wheel_separation': LaunchConfiguration('wheel_separation')}
+        ]
     )
 
     static_tf_base_to_imu_initial = Node(
@@ -72,7 +85,9 @@ def generate_launch_description():
     return LaunchDescription([
         scanner_arg,
         unilidar_arg,
-        odom_to_base_node,
+        wheel_radius_arg,
+        wheel_separation_arg,
+        tf_broadcaster_node,
         static_tf_base_to_imu_initial,
         IncludeLaunchDescription(PythonLaunchDescriptionSource(unitree_launch)),
         pointcloud_to_laserscan_node,

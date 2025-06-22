@@ -22,7 +22,7 @@ def generate_launch_description():
                 'imu_topic': '/unilidar/imu',
 
                 # --- Sensor-Specific Parameters ---
-                'min_laser_range': 0.55,  # ← lower this below your lidar’s true min
+                'min_laser_range': 0.60,  # ← lower this below your lidar’s true min
                 'max_laser_range': 10.0,
                 'transform_timeout': 2.0,
                 'transform_tolerance': 2.0,
