@@ -18,7 +18,7 @@ class AWCTFBroadcaster(Node):
         super().__init__("awc_controller")
 
         self.declare_parameter('wheel_radius', 0.08255)
-        self.declare_parameter('wheel_separation', 0.46)
+        self.declare_parameter('wheel_separation', 0.2325)
 
         self.wheel_radius_ = self.get_parameter('wheel_radius').get_parameter_value().double_value
         self.wheel_separation_ = self.get_parameter('wheel_separation').get_parameter_value().double_value
@@ -74,14 +74,21 @@ class AWCTFBroadcaster(Node):
         self.get_logger().info(f"[Right Wheel] rad/s: {self.right_wheel_vel_:.2f}")
 
     def velCallback(self, msg):
-        self.last_v_ = msg.linear.x
-        self.last_w_ = msg.angular.z
+        v = msg.linear.x
+        w = msg.angular.z
 
-        robot_speed = np.array([[self.last_v_], [self.last_w_]])
-        wheel_speed = np.matmul(np.linalg.inv(self.speed_conversion_), robot_speed)
-        wheel_speed_msg = Float64MultiArray()
-        wheel_speed_msg.data = [wheel_speed[0, 0], wheel_speed[1, 0]]
-        self.wheel_cmd_pub_.publish(wheel_speed_msg)
+        R = self.wheel_radius_
+        L = self.wheel_separation_
+
+        # differential-drive inverse kinematics:
+        #   ω_left  = (2·v – w·L) / (2·R)
+        #   ω_right = (2·v + w·L) / (2·R)
+        wl = (2.0 * v - w * L) / (2.0 * R)
+        wr = (2.0 * v + w * L) / (2.0 * R)
+
+        msg_out = Float64MultiArray()
+        msg_out.data = [wl, wr]
+        self.wheel_cmd_pub_.publish(msg_out)
 
     def timerCallback(self):
         now = self.get_clock().now()
