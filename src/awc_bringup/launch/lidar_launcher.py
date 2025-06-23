@@ -72,7 +72,7 @@ def generate_launch_description():
             'angle_max': 3.14159,
             'angle_increment': 0.0087,
             'scan_time': 0.1,
-            'range_min': 0.55,
+            'range_min': 0.75,
             'range_max': 10.0,
             'use_inf': True,
             'override_frame_id': 'base_link',
