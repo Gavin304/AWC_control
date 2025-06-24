@@ -24,11 +24,11 @@ def generate_launch_description():
         description='Namespace for input pointcloud topic'
     )
     wheel_radius_arg = DeclareLaunchArgument(
-        'wheel_radius', default_value='0.1651',
+        'wheel_radius', default_value='0.08255',
         description='Wheel radius in meters'
     )
     wheel_separation_arg = DeclareLaunchArgument(
-        'wheel_separation', default_value='0.46',
+        'wheel_separation', default_value='0.465',
         description='Wheel separation in meters'
     )
 

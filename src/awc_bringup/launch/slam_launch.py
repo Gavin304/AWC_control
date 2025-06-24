@@ -11,7 +11,7 @@ def generate_launch_description():
             parameters=[{
                 # --- Core Configuration ---
                 'use_scan_matching': True,
-                'use_imu_data': True,
+                'use_imu_data': False,
                 'use_sim_time': False,
 
                 # --- Frame and Topic Configuration ---
