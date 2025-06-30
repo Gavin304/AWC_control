@@ -24,11 +24,11 @@ def generate_launch_description():
         description='Namespace for input pointcloud topic'
     )
     wheel_radius_arg = DeclareLaunchArgument(
-        'wheel_radius', default_value='0.1651',
+        'wheel_radius', default_value='0.08255',
         description='Wheel radius in meters'
     )
     wheel_separation_arg = DeclareLaunchArgument(
-        'wheel_separation', default_value='0.46',
+        'wheel_separation', default_value='0.465',
         description='Wheel separation in meters'
     )
 
@@ -72,7 +72,7 @@ def generate_launch_description():
             'angle_max': 3.14159,
             'angle_increment': 0.0087,
             'scan_time': 0.1,
-            'range_min': 0.55,
+            'range_min': 0.75,
             'range_max': 10.0,
             'use_inf': True,
             'override_frame_id': 'base_link',
