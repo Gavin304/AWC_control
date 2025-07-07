@@ -199,8 +199,8 @@ void UnitreeLidarSDKNode::timer_callback()
             transformStamped.transform.translation.x = 0;
             transformStamped.transform.translation.y = 0;
             transformStamped.transform.translation.z = 0;
-            transformStamped.transform.rotation.x = -imu.quaternion[1];
-            transformStamped.transform.rotation.y = -imu.quaternion[2];
+            transformStamped.transform.rotation.x = imu.quaternion[1];
+            transformStamped.transform.rotation.y = imu.quaternion[2];
             transformStamped.transform.rotation.z = imu.quaternion[3];
             transformStamped.transform.rotation.w = imu.quaternion[0];
             broadcaster_->sendTransform(transformStamped);

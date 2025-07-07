@@ -28,7 +28,7 @@ def generate_launch_description():
         description='Wheel radius in meters'
     )
     wheel_separation_arg = DeclareLaunchArgument(
-        'wheel_separation', default_value='0.465',
+        'wheel_separation', default_value='0.482',
         description='Wheel separation in meters'
     )
 
@@ -47,7 +47,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         arguments=[
-            '0.3', '0', '1.2',
+            '0.19', '0', '1.2',
             '0', '0', '3.14159',
             'base_link',
             'unilidar_imu_initial'
